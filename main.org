@@ -1,0 +1,139 @@
+#+title: Main
+
+
+* Description
+This is the main file where index.html file is created and other pages are referred to.
+
+The html document starts with definining the document type as html.
+#+name: beginning
+#+begin_src html :tangle index.html :comments link
+<!DOCTYPE html>
+#+end_src
+
+Then we'll tell that content is in english with the "lang" attribute.
+#+name: begin_html
+#+begin_src html :tangle index.html :comments link
+<html lang="en">
+#+end_src
+
+We'll open the head element.
+#+name: head_start_tag
+#+begin_src html :tangle index.html :comments link
+
+<head>
+#+end_src
+
+We'll define the character encoding and additional information.
+#+name: meta_elements
+#+begin_src html :tangle index.html :comments link
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#+end_src
+
+Next we'll add reference to the cascading style sheets file. We'll create the actual CSS(Cascading Style Sheets) file, named style.css, later.
+#+name: stylesheet_imports
+#+begin_src html :tangle index.html :comments link
+    <link rel="stylesheet" href="style.css">
+#+end_src
+
+Next we begin title of the page. This will be shown on the page's tab and on the browsers title bar.
+#+name: page_title
+#+begin_src html :tangle index.html :comments link
+    <title>Deutsch üben</title>
+#+end_src
+
+Then we close the head element.
+#+name: head_end_tag
+#+begin_src html :tangle index.html :comments link
+</head>
+#+end_src
+
+Next we'll start defining the body element. The contents of the web page will be here.
+#+name: body_start_tag
+#+begin_src html :tangle index.html :comments link
+
+<body>
+#+end_src
+
+#+name: h1_el
+#+begin_src html :tangle index.html :comments link
+    <h1>Kleinigkeiten zum Deutsch üben</h1>
+#+end_src
+
+Let's create a unordered list which will contain different pages to practice German.
+
+#+name: start_practices_ul
+#+begin_src html :tangle index.html :comments link
+    <div class="container">
+
+        <ul>
+#+end_src
+
+We'll add a link to index.html file located in folder nummernHoeren. The file nummernHoeren/index.html is created from file [[./nummernHoeren/all.org]]
+#+name: nummerHoerenLink
+#+begin_src html :tangle index.html :comments link
+            <a href="./nummernHoeren/index.html">Üben Nummern hören</a>
+#+end_src
+
+#+name: end_practices_ul
+#+begin_src html :tangle index.html :comments link
+        </ul>
+
+    </div>
+#+end_src
+
+#+name: body_end_tag
+#+begin_src html :tangle index.html :comments link
+</body>
+#+end_src
+
+#+name: html_end_tag
+#+begin_src html :tangle index.html :comments link
+
+</html>
+#+end_src
+
+
+
+* Stylesheets
+Next we'll create a css file called style.css
+
+#+Name: css_template
+#+begin_src css :tangle style.css :comments link
+
+#+end_src
+
+
+#+begin_src css :tangle style.css :comments link
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+,* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    width: 30%;
+}
+#+end_src
+
+* Javascript
+
+Lets create the Javascript file.
+
+#+name: script_start
+#+begin_src javascript :tangle script.js :comments link
+
+#+end_src

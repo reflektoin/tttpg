@@ -1,0 +1,222 @@
+#+title: All
+
+* Description
+User will hear a number by clicking the button "Wiederholen".
+They can then click one of the options below. Clicking a button will repeat the sound.
+After their selection they can press "Überprüfen" to check whether they selected the correct option.
+
+If the choice was correct the Überprüfen button will change color to green and it's text will change to "Richtig!". If the answer was wrong, the button will turn red and text "Versuch nochmal" will appear.
+
+By loading the page again another number will be quizzed.
+
+* Building the page
+
+* HTML file
+First we'll create an index.html file.
+
+#+name: html_file
+#+begin_src html :tangle index.html :comments link
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nummern hören</title>
+</head>
+<body>
+
+  <audio id="null" src="sounds/De-null.ogg"></audio>
+  <audio id="eins" src="sounds/De-eins.ogg"></audio>
+  <audio id="zwei" src="sounds/De-zwei.ogg"></audio>
+  <audio id="drei" src="sounds/De-drei.ogg"></audio>
+
+  <div id="repeat">
+    <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
+
+  </div>
+
+  <div id="buttons">
+
+  </div>
+
+  <div id="check">
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+#+end_src
+
+Next we'll create a css file called style.css
+
+
+* CSS file
+#+name: css_file
+#+begin_src css :tangle style.css :comments link
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+,* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(161,100,223);
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.btn {
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn.repeatBtn{
+
+  font-size: 2rem;
+
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+
+  scale: 0.95;
+
+}
+.btn.selected {
+  opacity: 0.5;
+}
+
+.btn.wrong {
+  background-color: red;
+}
+.btn.correct{
+  background-color: green;
+}
+
+#repeat {
+  position: absolute;
+  top: 2.5%;
+
+}
+
+@media(max-width: 500px){
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+#+end_src
+
+
+* JavaScript file
+#+name: js_file
+#+begin_src javascript :tangle script.js :comments link
+const sounds = ['null', 'eins', 'zwei', 'drei'];
+let guessedAnswer = ''
+const correctNumber = getRandomNumberSound()
+const repeatBtn = document.querySelector('.btn.repeatBtn')
+console.log(repeatBtn)
+repeatBtn.addEventListener('click', () => {
+  document.getElementById(sounds[correctNumber]).play()
+})
+sounds.forEach(sound => {
+  const btn = document.createElement('button')
+  btn.classList.add('btn');
+  btn.classList.add('options');
+
+  btn.innerText = sound;
+
+  btn.addEventListener('click', () => {
+    resetCheckBtn()
+    clearSelection()
+    stopSongs();
+    document.getElementById(sound).play()
+    guessedAnswer = sound
+
+    //add indicator for selected answer
+    btn.classList.add('selected')
+  })
+
+  document.getElementById('buttons').
+    appendChild(btn);
+})
+
+const checkEl = document.getElementById('check')
+const checkBtn = document.createElement('button')
+
+checkBtn.innerText = 'Überpfüfen'
+checkBtn.classList.add('btn');
+checkBtn.addEventListener('click', () => {
+  //remove correct and wrong classes in case user had already guessed
+  checkBtn.classList.remove('correct')
+  checkBtn.classList.remove('right')
+  let correctAnswer = sounds[correctNumber]
+  if (guessedAnswer === correctAnswer) {
+    console.log('Correct answer')
+
+    //add class "correct" in order to stylize it to show that the answer was correct
+    checkBtn.classList.add('correct')
+    checkBtn.innerText = 'Richtig!'
+  } else {
+    console.log('Wrong answer')
+    checkBtn.classList.add('wrong')
+    checkBtn.innerText = 'Versuch nochmal'
+  }
+})
+
+checkEl.appendChild(checkBtn)
+
+function stopSongs() {
+  sounds.forEach(sound => {
+    const song = document.getElementById(sound)
+    song.pause();
+    song.currentTime = 0;
+  })
+}
+
+function getRandomNumberSound() {
+  return Math.floor(Math.random() * sounds.length)
+}
+
+function clearSelection() {
+  btns = document.querySelectorAll('.options')
+  console.log('clear selection')
+  btns.forEach((btn) => {
+    btn.classList.remove('selected')
+  })
+}
+
+function resetCheckBtn() {
+
+  const checkBtn = document.querySelector('#check button')
+  checkBtn.innerText = 'Überpfüfen'
+  checkBtn.classList.remove('wrong')
+}
+#+end_src

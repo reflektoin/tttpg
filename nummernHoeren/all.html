@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-04-16 Sun 13:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>All</title>
+<meta name="author" content="Reflektoin" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">All</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0b8c128">1. Description</a></li>
+<li><a href="#org6ebad5d">2. Building the page</a></li>
+<li><a href="#org72a9e0e">3. HTML file</a></li>
+<li><a href="#org3230678">4. CSS file</a></li>
+<li><a href="#orgdb88609">5. JavaScript file</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0b8c128" class="outline-2">
+<h2 id="org0b8c128"><span class="section-number-2">1.</span> Description</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+User will hear a number by clicking the button &ldquo;Wiederholen&rdquo;.
+They can then click one of the options below. Clicking a button will repeat the sound.
+After their selection they can press &ldquo;Überprüfen&rdquo; to check whether they selected the correct option.
+</p>
+
+<p>
+If the choice was correct the Überprüfen button will change color to green and it&rsquo;s text will change to &ldquo;Richtig!&rdquo;. If the answer was wrong, the button will turn red and text &ldquo;Versuch nochmal&rdquo; will appear.
+</p>
+
+<p>
+By loading the page again another number will be quizzed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ebad5d" class="outline-2">
+<h2 id="org6ebad5d"><span class="section-number-2">2.</span> Building the page</h2>
+</div>
+
+<div id="outline-container-org72a9e0e" class="outline-2">
+<h2 id="org72a9e0e"><span class="section-number-2">3.</span> HTML file</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+First we&rsquo;ll create an index.html file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html" id="org0073544">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
+&lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"en"</span>&gt;
+
+&lt;<span style="color: #c678dd;">head</span>&gt;
+    &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"UTF-8"</span>&gt;
+    &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">http-equiv</span>=<span style="color: #98be65;">"X-UA-Compatible"</span> <span style="color: #dcaeea;">content</span>=<span style="color: #98be65;">"IE=edge"</span>&gt;
+    &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">name</span>=<span style="color: #98be65;">"viewport"</span> <span style="color: #dcaeea;">content</span>=<span style="color: #98be65;">"width=device-width, initial-scale=1.0"</span>&gt;
+    &lt;<span style="color: #c678dd;">link</span> <span style="color: #dcaeea;">rel</span>=<span style="color: #98be65;">"stylesheet"</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"style.css"</span>&gt;
+    &lt;<span style="color: #c678dd;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Nummern h&#246;ren</span>&lt;/<span style="color: #c678dd;">title</span>&gt;
+&lt;/<span style="color: #c678dd;">head</span>&gt;
+&lt;<span style="color: #c678dd;">body</span>&gt;
+
+  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"null"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-null.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"eins"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-eins.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"zwei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-zwei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"drei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-drei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+
+  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
+    &lt;<span style="color: #c678dd;">button</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeatBtn"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"btn repeatBtn"</span>&gt;Wiederholen&lt;/<span style="color: #c678dd;">button</span>&gt;
+
+  &lt;/<span style="color: #c678dd;">div</span>&gt;
+
+  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
+
+  &lt;/<span style="color: #c678dd;">div</span>&gt;
+
+  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
+
+  &lt;/<span style="color: #c678dd;">div</span>&gt;
+
+  &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
+&lt;/<span style="color: #c678dd;">body</span>&gt;
+
+&lt;/<span style="color: #c678dd;">html</span>&gt;
+</pre>
+</div>
+
+<p>
+Next we&rsquo;ll create a css file called style.css
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org3230678" class="outline-2">
+<h2 id="org3230678"><span class="section-number-2">4.</span> CSS file</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-css" id="org00e1402"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
+
+<span style="color: #51afef;">* </span>{
+  <span style="color: #98be65;">box-sizing</span>: border-box;
+}
+
+<span style="color: #51afef;">body </span>{
+  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #a164df;">rgb(161,100,223)</span>;
+  <span style="color: #98be65;">font-family</span>: <span style="color: #98be65;">'Ubuntu'</span>, sans-serif;
+  <span style="color: #98be65;">display</span>: flex;
+  <span style="color: #98be65;">flex-direction</span>: column;
+  <span style="color: #98be65;">flex-wrap</span>: wrap;
+  <span style="color: #98be65;">align-items</span>: center;
+  <span style="color: #98be65;">justify-content</span>: center;
+  <span style="color: #98be65;">text-align</span>: center;
+  <span style="color: #98be65;">margin</span>: <span style="color: #da8548; font-weight: bold;">0</span>;
+  <span style="color: #98be65;">overflow</span>: hidden;
+  <span style="color: #98be65;">height</span>: 100vh;
+}
+
+<span style="color: #51afef;">.btn </span>{
+  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #663399;">rebeccapurple</span>;
+  <span style="color: #98be65;">border-radius</span>: 5px;
+  <span style="color: #98be65;">border</span>: none;
+  <span style="color: #98be65;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
+  <span style="color: #98be65;">margin</span>: 1rem;
+  <span style="color: #98be65;">padding</span>: 1.5rem 3rem;
+  <span style="color: #98be65;">font-size</span>: 1.2rem;
+  <span style="color: #98be65;">font-family</span>: inherit;
+  <span style="color: #98be65;">cursor</span>: pointer;
+}
+
+<span style="color: #51afef;">.btn.repeatBtn</span>{
+
+  <span style="color: #98be65;">font-size</span>: 2rem;
+
+}
+
+<span style="color: #51afef;">.btn:hover </span>{
+  <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.9</span>;
+}
+
+
+<span style="color: #51afef;">.btn:focus </span>{
+  <span style="color: #98be65;">outline</span>: none;
+}
+
+<span style="color: #51afef;">.btn:active </span>{
+
+  <span style="color: #98be65;">scale</span>: <span style="color: #da8548; font-weight: bold;">0.95</span>;
+
+}
+<span style="color: #51afef;">.btn.selected </span>{
+  <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.5</span>;
+}
+
+<span style="color: #51afef;">.btn.wrong </span>{
+  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
+}
+<span style="color: #51afef;">.btn.correct</span>{
+  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
+}
+
+<span style="color: #51afef;">#repeat </span>{
+  <span style="color: #98be65;">position</span>: absolute;
+  <span style="color: #98be65;">top</span>: <span style="color: #da8548; font-weight: bold;">2.5</span>%;
+
+}
+
+<span style="color: #c678dd;">@media</span>(max-width: 500px){
+  <span style="color: #51afef;">.btn </span>{
+    <span style="color: #98be65;">font-size</span>: 0.8rem;
+  }
+}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgdb88609" class="outline-2">
+<h2 id="orgdb88609"><span class="section-number-2">5.</span> JavaScript file</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgbe1d5d1"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>];
+<span style="color: #51afef;">let</span> <span style="color: #dcaeea;">guessedAnswer</span> = <span style="color: #98be65;">''</span>
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">correctNumber</span> = getRandomNumberSound()
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">repeatBtn</span> = document.querySelector(<span style="color: #98be65;">'.btn.repeatBtn'</span>)
+console.log(repeatBtn)
+repeatBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
+  document.getElementById(sounds[correctNumber]).play()
+})
+sounds.forEach(sound =&gt; {
+  <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">btn</span> = document.createElement(<span style="color: #98be65;">'button'</span>)
+  btn.classList.add(<span style="color: #98be65;">'btn'</span>);
+  btn.classList.add(<span style="color: #98be65;">'options'</span>);
+
+  btn.innerText = sound;
+
+  btn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
+    resetCheckBtn()
+    clearSelection()
+    stopSongs();
+    document.getElementById(sound).play()
+    guessedAnswer = sound
+
+    <span style="color: #5B6268;">//</span><span style="color: #5B6268;">add indicator for selected answer</span>
+    btn.classList.add(<span style="color: #98be65;">'selected'</span>)
+  })
+
+  document.getElementById(<span style="color: #98be65;">'buttons'</span>).
+    appendChild(btn);
+})
+
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkEl</span> = document.getElementById(<span style="color: #98be65;">'check'</span>)
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkBtn</span> = document.createElement(<span style="color: #98be65;">'button'</span>)
+
+checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
+checkBtn.classList.add(<span style="color: #98be65;">'btn'</span>);
+checkBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
+  <span style="color: #5B6268;">//</span><span style="color: #5B6268;">remove correct and wrong classes in case user had already guessed</span>
+  checkBtn.classList.remove(<span style="color: #98be65;">'correct'</span>)
+  checkBtn.classList.remove(<span style="color: #98be65;">'right'</span>)
+  <span style="color: #51afef;">let</span> <span style="color: #dcaeea;">correctAnswer</span> = sounds[correctNumber]
+  <span style="color: #51afef;">if</span> (guessedAnswer === correctAnswer) {
+    console.log(<span style="color: #98be65;">'Correct answer'</span>)
+
+    <span style="color: #5B6268;">//</span><span style="color: #5B6268;">add class "correct" in order to stylize it to show that the answer was correct</span>
+    checkBtn.classList.add(<span style="color: #98be65;">'correct'</span>)
+    checkBtn.innerText = <span style="color: #98be65;">'Richtig!'</span>
+  } <span style="color: #51afef;">else</span> {
+    console.log(<span style="color: #98be65;">'Wrong answer'</span>)
+    checkBtn.classList.add(<span style="color: #98be65;">'wrong'</span>)
+    checkBtn.innerText = <span style="color: #98be65;">'Versuch nochmal'</span>
+  }
+})
+
+checkEl.appendChild(checkBtn)
+
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">stopSongs</span>() {
+  sounds.forEach(sound =&gt; {
+    <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">song</span> = document.getElementById(sound)
+    song.pause();
+    song.currentTime = <span style="color: #da8548; font-weight: bold;">0</span>;
+  })
+}
+
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">getRandomNumberSound</span>() {
+  <span style="color: #51afef;">return</span> Math.floor(Math.random() * sounds.length)
+}
+
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">clearSelection</span>() {
+  btns = document.querySelectorAll(<span style="color: #98be65;">'.options'</span>)
+  console.log(<span style="color: #98be65;">'clear selection'</span>)
+  btns.forEach((btn) =&gt; {
+    btn.classList.remove(<span style="color: #98be65;">'selected'</span>)
+  })
+}
+
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">resetCheckBtn</span>() {
+
+  <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkBtn</span> = document.querySelector(<span style="color: #98be65;">'#check button'</span>)
+  checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
+  checkBtn.classList.remove(<span style="color: #98be65;">'wrong'</span>)
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Reflektoin</p>
+<p class="date">Created: 2023-04-16 Sun 13:30</p>
+</div>
+</body>
+</html>
