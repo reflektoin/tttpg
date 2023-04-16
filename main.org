@@ -137,3 +137,16 @@ Lets create the Javascript file.
 #+begin_src javascript :tangle script.js :comments link
 
 #+end_src
+
+
+* README file for the git report
+
+#+name: readmefile
+#+begin_src org :tangle README.org
+This repo contains sources for site: https://reflektoin.github.io/tttpg/.
+
+
+Purpose is mostly for me to learn web development in the form of creating exercises to practice German.
+
+This file (README.org) was created from the file main.org. Each folder contains a .org file which is used to generate other files in that folder.
+#+end_src
