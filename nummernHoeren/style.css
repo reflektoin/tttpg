@@ -2,75 +2,79 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(161,100,223);
-  font-family: 'Ubuntu', sans-serif;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
-  overflow: hidden;
-  height: 100vh;
+    background-color: rgb(161,100,223);
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
 }
 
 .btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  margin: 1rem;
-  padding: 1.5rem 3rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  cursor: pointer;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .btn.repeatBtn{
 
-  font-size: 2rem;
+    font-size: 2rem;
 
 }
 
 .btn:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 
 .btn:focus {
-  outline: none;
+    outline: none;
 }
 
 .btn:active {
 
-  scale: 0.95;
+    scale: 0.95;
 
 }
 .btn.selected {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .btn.wrong {
-  background-color: red;
+    background-color: red;
 }
 .btn.correct{
-  background-color: green;
+    background-color: green;
 }
 
 #repeat {
-  position: absolute;
-  top: 2.5%;
+    position: absolute;
+    top: 2.5%;
 
 }
 
 @media(max-width: 500px){
-  .btn {
-    font-size: 0.8rem;
-  }
+    .btn {
+        font-size: 0.8rem;
+    }
 }
 /* css_file ends here */

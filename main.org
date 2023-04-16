@@ -149,4 +149,7 @@ This repo contains sources for site: https://reflektoin.github.io/tttpg/.
 Purpose is mostly for me to learn web development in the form of creating exercises to practice German.
 
 This file (README.org) was created from the file main.org. Each folder contains a .org file which is used to generate other files in that folder.
+
+
+Sounds for nummernHoeren were downloaded from https://de.wiktionary.org/ the license is https://creativecommons.org/licenses/by-sa/3.0/deed.en.
 #+end_src

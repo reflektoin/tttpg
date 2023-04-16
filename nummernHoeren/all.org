@@ -26,27 +26,30 @@ First we'll create an index.html file.
     <link rel="stylesheet" href="style.css">
     <title>Nummern hören</title>
 </head>
+
 <body>
 
-  <audio id="null" src="sounds/De-null.ogg"></audio>
-  <audio id="eins" src="sounds/De-eins.ogg"></audio>
-  <audio id="zwei" src="sounds/De-zwei.ogg"></audio>
-  <audio id="drei" src="sounds/De-drei.ogg"></audio>
+    <audio id="null" src="sounds/De-null.ogg"></audio>
+    <audio id="eins" src="sounds/De-eins.ogg"></audio>
+    <audio id="zwei" src="sounds/De-zwei.ogg"></audio>
+    <audio id="drei" src="sounds/De-drei.ogg"></audio>
 
-  <div id="repeat">
-    <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
+    <div id="repeat">
+        <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
 
-  </div>
+    </div>
 
-  <div id="buttons">
+    <div id="buttons">
 
-  </div>
+    </div>
 
-  <div id="check">
+    <div id="check">
 
-  </div>
-
-  <script src="script.js"></script>
+    </div>
+    <footer>Licence for sounds: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">here</a><br>
+        Source for sounds: <a href="https://de.wiktionary.org/wiki/Datei:De-eins.ogg">here</a>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
@@ -61,76 +64,80 @@ Next we'll create a css file called style.css
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 ,* {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(161,100,223);
-  font-family: 'Ubuntu', sans-serif;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
-  overflow: hidden;
-  height: 100vh;
+    background-color: rgb(161,100,223);
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
 }
 
 .btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  margin: 1rem;
-  padding: 1.5rem 3rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  cursor: pointer;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .btn.repeatBtn{
 
-  font-size: 2rem;
+    font-size: 2rem;
 
 }
 
 .btn:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 
 .btn:focus {
-  outline: none;
+    outline: none;
 }
 
 .btn:active {
 
-  scale: 0.95;
+    scale: 0.95;
 
 }
 .btn.selected {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .btn.wrong {
-  background-color: red;
+    background-color: red;
 }
 .btn.correct{
-  background-color: green;
+    background-color: green;
 }
 
 #repeat {
-  position: absolute;
-  top: 2.5%;
+    position: absolute;
+    top: 2.5%;
 
 }
 
 @media(max-width: 500px){
-  .btn {
-    font-size: 0.8rem;
-  }
+    .btn {
+        font-size: 0.8rem;
+    }
 }
 #+end_src
 
