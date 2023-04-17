@@ -1,5 +1,67 @@
 // [[file:all.org::js_file][js_file]]
-const sounds = ['null', 'eins', 'zwei', 'drei'];
+const sounds = ['null', 'eins', 'zwei', 'drei', 'fünf',
+                'sechs',
+                'sieben',
+                'acht',
+                'neun',
+                'zehn',
+                'elf',
+                'zwölf',
+                'dreizehn',
+'vierzehn',
+'fünfzehn',
+'sechzehn',
+'siebzehn',
+'achtzehn',
+'neunzehn',
+'zwanzig',
+'einundzwanzig',
+'zweiundzwanzig',
+'dreiundzwanzig',
+'vierundzwanzig',
+'fünfundzwanzig',
+'sechsundzwanzig',
+'siebenundzwanzig',
+'achtundzwanzig',
+'neunundzwanzig',
+'dreißig',
+'einunddreißig',
+'zweiunddreißig',
+'dreiunddreißig',
+'vierunddreißig',
+'fünfunddreißig',
+'sechsunddreißig',
+'siebenunddreißig',
+'achtunddreißig',
+'neununddreißig',
+'vierzig',
+'einundvierzig',
+'zweiundvierzig',
+'dreiundvierzig',
+'vierundvierzig',
+'fünfundvierzig',
+'sechsundvierzig',
+'siebenundvierzig',
+'achtundvierzig',
+'neunundvierzig',
+'fünfzig',
+'einundfünfzig',
+'zweiundfünfzig',
+'dreiundfünfzig',
+'vierundfünfzig',
+'fünfundfünfzig'
+        ];
+addSounds()
+function addSounds(){
+  sounds.forEach((sound) => {
+    const body = document.querySelector('body')
+    const soundEl = document.createElement('audio')
+    soundEl.id = sound
+    soundEl.src = `sounds/De-${sound}.ogg`
+    body.appendChild(soundEl)
+  });
+}
+
 let guessedAnswer = ''
 const correctNumber = getRandomNumberSound()
 const repeatBtn = document.querySelector('.btn.repeatBtn')

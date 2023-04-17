@@ -9,13 +9,22 @@ If the choice was correct the Überprüfen button will change color to green and
 
 By loading the page again another number will be quizzed.
 
+
+* IDEAS
+** TODO Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
+
+
 * Building the page
 
-* HTML file
+** Sound files
+The sound files are downloaded from the [[https://de.wiktionary.org/wiki/zwei][German wiktionary]]. The first four numbers (zero to three) I've downloaded manually, but if I'm going to add tens of hundreds of numbers I'd like to do it programmatically.
+
+
+** HTML file
 First we'll create an index.html file.
 
 #+name: html_file
-#+begin_src html :tangle index.html :comments link
+#+begin_src html :tangle index.html :comments link :noweb yes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,11 +37,11 @@ First we'll create an index.html file.
 </head>
 
 <body>
-
     <audio id="null" src="sounds/De-null.ogg"></audio>
     <audio id="eins" src="sounds/De-eins.ogg"></audio>
     <audio id="zwei" src="sounds/De-zwei.ogg"></audio>
     <audio id="drei" src="sounds/De-drei.ogg"></audio>
+    <audio id="acht" src="sounds/De-acht.ogg"></audio>
 
     <div id="repeat">
         <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
@@ -46,7 +55,8 @@ First we'll create an index.html file.
     <div id="check">
 
     </div>
-    <footer>License (CC BY-SA 3.0) for sounds: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">here</a><br>
+    <footer>License (CC BY-SA 3.0) for sounds: <a
+            href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">here</a><br>
         Source for sounds: <a href="https://de.wiktionary.org/wiki/Datei:De-eins.ogg">here</a>
     </footer>
     <script src="script.js"></script>
@@ -58,7 +68,7 @@ First we'll create an index.html file.
 Next we'll create a css file called style.css
 
 
-* CSS file
+** CSS file
 #+name: css_file
 #+begin_src css :tangle style.css :comments link
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
@@ -131,7 +141,6 @@ footer {
 #repeat {
     position: absolute;
     top: 2.5%;
-
 }
 
 @media(max-width: 500px){
@@ -142,10 +151,72 @@ footer {
 #+end_src
 
 
-* JavaScript file
+** JavaScript file
 #+name: js_file
 #+begin_src javascript :tangle script.js :comments link
-const sounds = ['null', 'eins', 'zwei', 'drei'];
+const sounds = ['null', 'eins', 'zwei', 'drei', 'fünf',
+                'sechs',
+                'sieben',
+                'acht',
+                'neun',
+                'zehn',
+                'elf',
+                'zwölf',
+                'dreizehn',
+'vierzehn',
+'fünfzehn',
+'sechzehn',
+'siebzehn',
+'achtzehn',
+'neunzehn',
+'zwanzig',
+'einundzwanzig',
+'zweiundzwanzig',
+'dreiundzwanzig',
+'vierundzwanzig',
+'fünfundzwanzig',
+'sechsundzwanzig',
+'siebenundzwanzig',
+'achtundzwanzig',
+'neunundzwanzig',
+'dreißig',
+'einunddreißig',
+'zweiunddreißig',
+'dreiunddreißig',
+'vierunddreißig',
+'fünfunddreißig',
+'sechsunddreißig',
+'siebenunddreißig',
+'achtunddreißig',
+'neununddreißig',
+'vierzig',
+'einundvierzig',
+'zweiundvierzig',
+'dreiundvierzig',
+'vierundvierzig',
+'fünfundvierzig',
+'sechsundvierzig',
+'siebenundvierzig',
+'achtundvierzig',
+'neunundvierzig',
+'fünfzig',
+'einundfünfzig',
+'zweiundfünfzig',
+'dreiundfünfzig',
+'vierundfünfzig',
+'fünfundfünfzig'
+        ];
+addSounds()
+function addSounds(){
+  sounds.forEach((sound) => {
+    const body = document.querySelector('body')
+    const soundEl = document.createElement('audio')
+    soundEl.id = sound
+    soundEl.src = `sounds/De-${sound}.ogg`
+    body.appendChild(soundEl)
+  });
+}
+
 let guessedAnswer = ''
 const correctNumber = getRandomNumberSound()
 const repeatBtn = document.querySelector('.btn.repeatBtn')
