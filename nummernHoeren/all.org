@@ -16,6 +16,7 @@ By loading the page again another number will be quizzed.
 :CUSTOM_ID: Stylize-wiederholen-überprüfen-buttons
 :END:
 ** Reduce number of answer options
+Now "Wiederholen" button overlaps with some of the choice options.
 ** Generate random answer options
 ** Add option quiz specific set of numbers
 ** Add option to quiz specific range of numbers
@@ -23,6 +24,11 @@ By loading the page again another number will be quizzed.
 Split related rows into their own blocks. Aim is to make it easier to refer to them and comment on them.
 ** Change vocabulary used to match Multiple choice terminology
 Currently source code contains haphazardly used vocabulary/terminology. Maybe aim could be to talk about concepts using words in Wikipedia's [[https://en.wikipedia.org/wiki/Multiple_choice][multiple choice article]].
+** Provide a way to quiz another sound?
+Currently a new sound is available only when page is reloaded. Provide a way to get a new question without reloading. For example a button to play another sound.
+
+Maybe the "Wiederholen" button could be changed to ask if user wants another number question.
+** Design for both laptop/desktop and cellphone monitors
 
 
 * Building the page
