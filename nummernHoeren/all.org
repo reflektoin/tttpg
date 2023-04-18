@@ -15,6 +15,14 @@ By loading the page again another number will be quizzed.
 :PROPERTIES:
 :CUSTOM_ID: Stylize-wiederholen-überprüfen-buttons
 :END:
+** Reduce number of answer options
+** Generate random answer options
+** Add option quiz specific set of numbers
+** Add option to quiz specific range of numbers
+** Split js_file code block into separate blocks
+Split related rows into their own blocks. Aim is to make it easier to refer to them and comment on them.
+** Change vocabulary used to match Multiple choice terminology
+Currently source code contains haphazardly used vocabulary/terminology. Maybe aim could be to talk about concepts using words in Wikipedia's [[https://en.wikipedia.org/wiki/Multiple_choice][multiple choice article]].
 
 
 * Building the page
