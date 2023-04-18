@@ -119,11 +119,18 @@ Next we'll create a css file called style.css
 #+name: css_file
 #+begin_src css :tangle style.css :comments link
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+#+end_src
 
+#+name: global_styling
+#+begin_src css :tangle style.css :comments link
 ,* {
     box-sizing: border-box;
 }
 
+#+end_src
+
+#+name: body_styling
+#+begin_src css :tangle style.css :comments link
 body {
     background-color: rgb(161,100,223);
     font-family: 'Ubuntu', sans-serif;
@@ -137,11 +144,18 @@ body {
     overflow: hidden;
     height: 100vh;
 }
+#+end_src
+
+#+name: footer_styling
+#+begin_src css :tangle style.css :comments link
 footer {
     position: absolute;
     bottom: 10px;
 }
+#+end_src
 
+#+name: btn_class_styling
+#+begin_src css :tangle style.css :comments link
 .btn {
     background-color: rebeccapurple;
     border-radius: 5px;
@@ -153,47 +167,83 @@ footer {
     font-family: inherit;
     cursor: pointer;
 }
+#+end_src
 
+#+name: repeatBtn_styling
+#+begin_src css :tangle style.css :comments link
 .btn.repeatBtn{
     background-color: #444444;
     font-size: 2rem;
 
 }
+#+end_src
 
+https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+#+name: btn_hover_styling
+#+begin_src css :tangle style.css :comments link
 .btn:hover {
     opacity: 0.9;
 }
+#+end_src
 
-
+#+name: btn_focus_styling
+#+begin_src css :tangle style.css :comments link
 .btn:focus {
     outline: none;
 }
+#+end_src
 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+#+name: btn_active_styling
+#+begin_src css :tangle style.css :comments link
 .btn:active {
-
     scale: 0.95;
-
 }
+#+end_src
+
+This defines how the user's selected option (the button which was clicked) is being stylized.
+#+name: btn_selected_styling
+#+begin_src css :tangle style.css :comments link
 .btn.selected {
     opacity: 0.5;
 }
+#+end_src
 
-
+#+name: repeat_id_styling
+#+begin_src css :tangle style.css :comments link
 #repeat {
     position: absolute;
     top: 2.5%;
 }
+#+end_src
 
+#+name: btn_check_styling
+#+begin_src css :tangle style.css :comments link
 .btn.check {
     background-color: #1739dd;
     margin: 50px;
 }
+#+end_src
+
+#+name: btn_check_wrong_styling
+#+begin_src css :tangle style.css :comments link
 .btn.check.wrong {
     background-color: red;
 }
+#+end_src
+
+#+name: btn_correct_styling
+#+begin_src css :tangle style.css :comments link
 .btn.correct{
     background-color: green;
 }
+#+end_src
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+#+name: small_screen styling
+#+begin_src css :tangle style.css :comments link
 @media(max-width: 500px){
     .btn {
         font-size: 0.8rem;

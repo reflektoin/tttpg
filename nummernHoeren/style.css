@@ -1,10 +1,14 @@
 /* [[file:all.org::css_file][css_file]] */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/* css_file ends here */
 
+/* [[file:all.org::global_styling][global_styling]] */
 * {
     box-sizing: border-box;
 }
+/* global_styling ends here */
 
+/* [[file:all.org::body_styling][body_styling]] */
 body {
     background-color: rgb(161,100,223);
     font-family: 'Ubuntu', sans-serif;
@@ -18,11 +22,16 @@ body {
     overflow: hidden;
     height: 100vh;
 }
+/* body_styling ends here */
+
+/* [[file:all.org::footer_styling][footer_styling]] */
 footer {
     position: absolute;
     bottom: 10px;
 }
+/* footer_styling ends here */
 
+/* [[file:all.org::btn_class_styling][btn_class_styling]] */
 .btn {
     background-color: rebeccapurple;
     border-radius: 5px;
@@ -34,50 +43,70 @@ footer {
     font-family: inherit;
     cursor: pointer;
 }
+/* btn_class_styling ends here */
 
+/* [[file:all.org::repeatBtn_styling][repeatBtn_styling]] */
 .btn.repeatBtn{
     background-color: #444444;
     font-size: 2rem;
 
 }
+/* repeatBtn_styling ends here */
 
+/* [[file:all.org::btn_hover_styling][btn_hover_styling]] */
 .btn:hover {
     opacity: 0.9;
 }
+/* btn_hover_styling ends here */
 
-
+/* [[file:all.org::btn_focus_styling][btn_focus_styling]] */
 .btn:focus {
     outline: none;
 }
+/* btn_focus_styling ends here */
 
+/* [[file:all.org::btn_active_styling][btn_active_styling]] */
 .btn:active {
-
     scale: 0.95;
-
 }
+/* btn_active_styling ends here */
+
+/* [[file:all.org::btn_selected_styling][btn_selected_styling]] */
 .btn.selected {
     opacity: 0.5;
 }
+/* btn_selected_styling ends here */
 
-
+/* [[file:all.org::repeat_id_styling][repeat_id_styling]] */
 #repeat {
     position: absolute;
     top: 2.5%;
 }
+/* repeat_id_styling ends here */
 
+/* [[file:all.org::btn_check_styling][btn_check_styling]] */
 .btn.check {
     background-color: #1739dd;
     margin: 50px;
 }
+/* btn_check_styling ends here */
+
+/* [[file:all.org::btn_check_wrong_styling][btn_check_wrong_styling]] */
 .btn.check.wrong {
     background-color: red;
 }
+/* btn_check_wrong_styling ends here */
+
+/* [[file:all.org::btn_correct_styling][btn_correct_styling]] */
 .btn.correct{
     background-color: green;
 }
+/* btn_correct_styling ends here */
+
+/* [[file:all.org::small_screen styling][small_screen styling]] */
 @media(max-width: 500px){
     .btn {
         font-size: 0.8rem;
     }
 }
-/* css_file ends here */
+/* small_screen styling ends here */
