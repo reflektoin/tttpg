@@ -11,7 +11,10 @@ By loading the page again another number will be quizzed.
 
 
 * IDEAS
-** TODO Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
+** DONE Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
+:PROPERTIES:
+:CUSTOM_ID: Stylize-wiederholen-überprüfen-buttons
+:END:
 
 
 * Building the page
@@ -108,7 +111,7 @@ footer {
 }
 
 .btn.repeatBtn{
-
+    background-color: #444444;
     font-size: 2rem;
 
 }
@@ -131,18 +134,22 @@ footer {
     opacity: 0.5;
 }
 
-.btn.wrong {
-    background-color: red;
-}
-.btn.correct{
-    background-color: green;
-}
 
 #repeat {
     position: absolute;
     top: 2.5%;
 }
 
+.btn.check {
+    background-color: #1739dd;
+    margin: 50px;
+}
+.btn.check.wrong {
+    background-color: red;
+}
+.btn.correct{
+    background-color: green;
+}
 @media(max-width: 500px){
     .btn {
         font-size: 0.8rem;
@@ -251,6 +258,7 @@ const checkBtn = document.createElement('button')
 
 checkBtn.innerText = 'Überpfüfen'
 checkBtn.classList.add('btn');
+checkBtn.classList.add ('check')
 checkBtn.addEventListener('click', () => {
   //remove correct and wrong classes in case user had already guessed
   checkBtn.classList.remove('correct')

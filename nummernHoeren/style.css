@@ -36,7 +36,7 @@ footer {
 }
 
 .btn.repeatBtn{
-
+    background-color: #444444;
     font-size: 2rem;
 
 }
@@ -59,18 +59,22 @@ footer {
     opacity: 0.5;
 }
 
-.btn.wrong {
-    background-color: red;
-}
-.btn.correct{
-    background-color: green;
-}
 
 #repeat {
     position: absolute;
     top: 2.5%;
 }
 
+.btn.check {
+    background-color: #1739dd;
+    margin: 50px;
+}
+.btn.check.wrong {
+    background-color: red;
+}
+.btn.correct{
+    background-color: green;
+}
 @media(max-width: 500px){
     .btn {
         font-size: 0.8rem;

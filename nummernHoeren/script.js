@@ -96,6 +96,7 @@ const checkBtn = document.createElement('button')
 
 checkBtn.innerText = 'Überpfüfen'
 checkBtn.classList.add('btn');
+checkBtn.classList.add ('check')
 checkBtn.addEventListener('click', () => {
   //remove correct and wrong classes in case user had already guessed
   checkBtn.classList.remove('correct')

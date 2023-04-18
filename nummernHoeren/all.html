@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-04-16 Sun 13:30 -->
+<!-- 2023-04-18 Tue 11:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>All</title>
@@ -201,17 +201,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0b8c128">1. Description</a></li>
-<li><a href="#org6ebad5d">2. Building the page</a></li>
-<li><a href="#org72a9e0e">3. HTML file</a></li>
-<li><a href="#org3230678">4. CSS file</a></li>
-<li><a href="#orgdb88609">5. JavaScript file</a></li>
+<li><a href="#org4c6354f">1. Description</a></li>
+<li><a href="#org3557be9">2. IDEAS</a>
+<ul>
+<li><a href="#Stylize-wiederholen-überprüfen-buttons">2.1. <span class="done DONE">DONE</span> Stylize buttons &ldquo;Wiederholen&rdquo; and &ldquo;Überprüfen&rdquo; to diffently from answer options</a></li>
+</ul>
+</li>
+<li><a href="#orgaad93b5">3. Building the page</a>
+<ul>
+<li><a href="#orgfae74e2">3.1. Sound files</a></li>
+<li><a href="#orgfecba1a">3.2. HTML file</a></li>
+<li><a href="#org61ce520">3.3. CSS file</a></li>
+<li><a href="#org47bd49d">3.4. JavaScript file</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0b8c128" class="outline-2">
-<h2 id="org0b8c128"><span class="section-number-2">1.</span> Description</h2>
+<div id="outline-container-org4c6354f" class="outline-2">
+<h2 id="org4c6354f"><span class="section-number-2">1.</span> Description</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 User will hear a number by clicking the button &ldquo;Wiederholen&rdquo;.
@@ -229,19 +238,42 @@ By loading the page again another number will be quizzed.
 </div>
 </div>
 
-<div id="outline-container-org6ebad5d" class="outline-2">
-<h2 id="org6ebad5d"><span class="section-number-2">2.</span> Building the page</h2>
+
+<div id="outline-container-org3557be9" class="outline-2">
+<h2 id="org3557be9"><span class="section-number-2">2.</span> IDEAS</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-Stylize-wiederholen-überprüfen-buttons" class="outline-3">
+<h3 id="Stylize-wiederholen-überprüfen-buttons"><span class="section-number-3">2.1.</span> <span class="done DONE">DONE</span> Stylize buttons &ldquo;Wiederholen&rdquo; and &ldquo;Überprüfen&rdquo; to diffently from answer options</h3>
+<div class="outline-text-3" id="text-Stylize-wiederholen-überprüfen-buttons">
+</div>
+</div>
 </div>
 
-<div id="outline-container-org72a9e0e" class="outline-2">
-<h2 id="org72a9e0e"><span class="section-number-2">3.</span> HTML file</h2>
+
+<div id="outline-container-orgaad93b5" class="outline-2">
+<h2 id="orgaad93b5"><span class="section-number-2">3.</span> Building the page</h2>
 <div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgfae74e2" class="outline-3">
+<h3 id="orgfae74e2"><span class="section-number-3">3.1.</span> Sound files</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The sound files are downloaded from the <a href="https://de.wiktionary.org/wiki/zwei">German wiktionary</a>. The first four numbers (zero to three) I&rsquo;ve downloaded manually, but if I&rsquo;m going to add tens of hundreds of numbers I&rsquo;d like to do it programmatically.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgfecba1a" class="outline-3">
+<h3 id="orgfecba1a"><span class="section-number-3">3.2.</span> HTML file</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 First we&rsquo;ll create an index.html file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html" id="org0073544">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
+<pre class="src src-html" id="orga0667d0">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
 &lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"en"</span>&gt;
 
 &lt;<span style="color: #c678dd;">head</span>&gt;
@@ -251,27 +283,31 @@ First we&rsquo;ll create an index.html file.
     &lt;<span style="color: #c678dd;">link</span> <span style="color: #dcaeea;">rel</span>=<span style="color: #98be65;">"stylesheet"</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"style.css"</span>&gt;
     &lt;<span style="color: #c678dd;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Nummern h&#246;ren</span>&lt;/<span style="color: #c678dd;">title</span>&gt;
 &lt;/<span style="color: #c678dd;">head</span>&gt;
+
 &lt;<span style="color: #c678dd;">body</span>&gt;
+    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"null"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-null.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"eins"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-eins.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"zwei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-zwei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"drei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-drei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"acht"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-acht.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
 
-  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"null"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-null.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"eins"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-eins.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"zwei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-zwei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-  &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"drei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-drei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
+        &lt;<span style="color: #c678dd;">button</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeatBtn"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"btn repeatBtn"</span>&gt;Wiederholen&lt;/<span style="color: #c678dd;">button</span>&gt;
 
-  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
-    &lt;<span style="color: #c678dd;">button</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeatBtn"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"btn repeatBtn"</span>&gt;Wiederholen&lt;/<span style="color: #c678dd;">button</span>&gt;
+    &lt;/<span style="color: #c678dd;">div</span>&gt;
 
-  &lt;/<span style="color: #c678dd;">div</span>&gt;
+    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
 
-  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
+    &lt;/<span style="color: #c678dd;">div</span>&gt;
 
-  &lt;/<span style="color: #c678dd;">div</span>&gt;
+    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
 
-  &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
-
-  &lt;/<span style="color: #c678dd;">div</span>&gt;
-
-  &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
+    &lt;/<span style="color: #c678dd;">div</span>&gt;
+    &lt;<span style="color: #c678dd;">footer</span>&gt;License (CC BY-SA 3.0) for sounds: &lt;<span style="color: #c678dd;">a</span>
+            <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://creativecommons.org/licenses/by-sa/3.0/deed.en"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;&lt;<span style="color: #c678dd;">br</span>&gt;
+        Source for sounds: &lt;<span style="color: #c678dd;">a</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://de.wiktionary.org/wiki/Datei:De-eins.ogg"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;
+    &lt;/<span style="color: #c678dd;">footer</span>&gt;
+    &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
 &lt;/<span style="color: #c678dd;">body</span>&gt;
 
 &lt;/<span style="color: #c678dd;">html</span>&gt;
@@ -285,83 +321,90 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 
-<div id="outline-container-org3230678" class="outline-2">
-<h2 id="org3230678"><span class="section-number-2">4.</span> CSS file</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org61ce520" class="outline-3">
+<h3 id="org61ce520"><span class="section-number-3">3.3.</span> CSS file</h3>
+<div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
-<pre class="src src-css" id="org00e1402"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
+<pre class="src src-css" id="orgcfb011b"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
 
 <span style="color: #51afef;">* </span>{
-  <span style="color: #98be65;">box-sizing</span>: border-box;
+    <span style="color: #98be65;">box-sizing</span>: border-box;
 }
 
 <span style="color: #51afef;">body </span>{
-  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #a164df;">rgb(161,100,223)</span>;
-  <span style="color: #98be65;">font-family</span>: <span style="color: #98be65;">'Ubuntu'</span>, sans-serif;
-  <span style="color: #98be65;">display</span>: flex;
-  <span style="color: #98be65;">flex-direction</span>: column;
-  <span style="color: #98be65;">flex-wrap</span>: wrap;
-  <span style="color: #98be65;">align-items</span>: center;
-  <span style="color: #98be65;">justify-content</span>: center;
-  <span style="color: #98be65;">text-align</span>: center;
-  <span style="color: #98be65;">margin</span>: <span style="color: #da8548; font-weight: bold;">0</span>;
-  <span style="color: #98be65;">overflow</span>: hidden;
-  <span style="color: #98be65;">height</span>: 100vh;
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #a164df;">rgb(161,100,223)</span>;
+    <span style="color: #98be65;">font-family</span>: <span style="color: #98be65;">'Ubuntu'</span>, sans-serif;
+    <span style="color: #98be65;">display</span>: flex;
+    <span style="color: #98be65;">flex-direction</span>: column;
+    <span style="color: #98be65;">flex-wrap</span>: wrap;
+    <span style="color: #98be65;">align-items</span>: center;
+    <span style="color: #98be65;">justify-content</span>: center;
+    <span style="color: #98be65;">text-align</span>: center;
+    <span style="color: #98be65;">margin</span>: <span style="color: #da8548; font-weight: bold;">0</span>;
+    <span style="color: #98be65;">overflow</span>: hidden;
+    <span style="color: #98be65;">height</span>: 100vh;
+}
+<span style="color: #51afef;">footer </span>{
+    <span style="color: #98be65;">position</span>: absolute;
+    <span style="color: #98be65;">bottom</span>: 10px;
 }
 
 <span style="color: #51afef;">.btn </span>{
-  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #663399;">rebeccapurple</span>;
-  <span style="color: #98be65;">border-radius</span>: 5px;
-  <span style="color: #98be65;">border</span>: none;
-  <span style="color: #98be65;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
-  <span style="color: #98be65;">margin</span>: 1rem;
-  <span style="color: #98be65;">padding</span>: 1.5rem 3rem;
-  <span style="color: #98be65;">font-size</span>: 1.2rem;
-  <span style="color: #98be65;">font-family</span>: inherit;
-  <span style="color: #98be65;">cursor</span>: pointer;
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #663399;">rebeccapurple</span>;
+    <span style="color: #98be65;">border-radius</span>: 5px;
+    <span style="color: #98be65;">border</span>: none;
+    <span style="color: #98be65;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #98be65;">margin</span>: 1rem;
+    <span style="color: #98be65;">padding</span>: 1.5rem 3rem;
+    <span style="color: #98be65;">font-size</span>: 1.2rem;
+    <span style="color: #98be65;">font-family</span>: inherit;
+    <span style="color: #98be65;">cursor</span>: pointer;
 }
 
 <span style="color: #51afef;">.btn.repeatBtn</span>{
-
-  <span style="color: #98be65;">font-size</span>: 2rem;
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #444444;">#444444</span>;
+    <span style="color: #98be65;">font-size</span>: 2rem;
 
 }
 
 <span style="color: #51afef;">.btn:hover </span>{
-  <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.9</span>;
+    <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.9</span>;
 }
 
 
 <span style="color: #51afef;">.btn:focus </span>{
-  <span style="color: #98be65;">outline</span>: none;
+    <span style="color: #98be65;">outline</span>: none;
 }
 
 <span style="color: #51afef;">.btn:active </span>{
 
-  <span style="color: #98be65;">scale</span>: <span style="color: #da8548; font-weight: bold;">0.95</span>;
+    <span style="color: #98be65;">scale</span>: <span style="color: #da8548; font-weight: bold;">0.95</span>;
 
 }
 <span style="color: #51afef;">.btn.selected </span>{
-  <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.5</span>;
+    <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.5</span>;
 }
 
-<span style="color: #51afef;">.btn.wrong </span>{
-  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
-}
-<span style="color: #51afef;">.btn.correct</span>{
-  <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
-}
 
 <span style="color: #51afef;">#repeat </span>{
-  <span style="color: #98be65;">position</span>: absolute;
-  <span style="color: #98be65;">top</span>: <span style="color: #da8548; font-weight: bold;">2.5</span>%;
-
+    <span style="color: #98be65;">position</span>: absolute;
+    <span style="color: #98be65;">top</span>: <span style="color: #da8548; font-weight: bold;">2.5</span>%;
 }
 
+<span style="color: #51afef;">.btn.check </span>{
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #1739dd;">#1739dd</span>;
+    <span style="color: #98be65;">margin</span>: 50px;
+}
+<span style="color: #51afef;">.btn.check.wrong </span>{
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
+}
+<span style="color: #51afef;">.btn.correct</span>{
+    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
+}
 <span style="color: #c678dd;">@media</span>(max-width: 500px){
-  <span style="color: #51afef;">.btn </span>{
-    <span style="color: #98be65;">font-size</span>: 0.8rem;
-  }
+    <span style="color: #51afef;">.btn </span>{
+        <span style="color: #98be65;">font-size</span>: 0.8rem;
+    }
 }
 </pre>
 </div>
@@ -369,11 +412,73 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 
-<div id="outline-container-orgdb88609" class="outline-2">
-<h2 id="orgdb88609"><span class="section-number-2">5.</span> JavaScript file</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org47bd49d" class="outline-3">
+<h3 id="org47bd49d"><span class="section-number-3">3.4.</span> JavaScript file</h3>
+<div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
-<pre class="src src-javascript" id="orgbe1d5d1"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>];
+<pre class="src src-javascript" id="org2c24550"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>, <span style="color: #98be65;">'f&#252;nf'</span>,
+                <span style="color: #98be65;">'sechs'</span>,
+                <span style="color: #98be65;">'sieben'</span>,
+                <span style="color: #98be65;">'acht'</span>,
+                <span style="color: #98be65;">'neun'</span>,
+                <span style="color: #98be65;">'zehn'</span>,
+                <span style="color: #98be65;">'elf'</span>,
+                <span style="color: #98be65;">'zw&#246;lf'</span>,
+                <span style="color: #98be65;">'dreizehn'</span>,
+<span style="color: #98be65;">'vierzehn'</span>,
+<span style="color: #98be65;">'f&#252;nfzehn'</span>,
+<span style="color: #98be65;">'sechzehn'</span>,
+<span style="color: #98be65;">'siebzehn'</span>,
+<span style="color: #98be65;">'achtzehn'</span>,
+<span style="color: #98be65;">'neunzehn'</span>,
+<span style="color: #98be65;">'zwanzig'</span>,
+<span style="color: #98be65;">'einundzwanzig'</span>,
+<span style="color: #98be65;">'zweiundzwanzig'</span>,
+<span style="color: #98be65;">'dreiundzwanzig'</span>,
+<span style="color: #98be65;">'vierundzwanzig'</span>,
+<span style="color: #98be65;">'f&#252;nfundzwanzig'</span>,
+<span style="color: #98be65;">'sechsundzwanzig'</span>,
+<span style="color: #98be65;">'siebenundzwanzig'</span>,
+<span style="color: #98be65;">'achtundzwanzig'</span>,
+<span style="color: #98be65;">'neunundzwanzig'</span>,
+<span style="color: #98be65;">'drei&#223;ig'</span>,
+<span style="color: #98be65;">'einunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'zweiunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'dreiunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'vierunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'f&#252;nfunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'sechsunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'siebenunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'achtunddrei&#223;ig'</span>,
+<span style="color: #98be65;">'neununddrei&#223;ig'</span>,
+<span style="color: #98be65;">'vierzig'</span>,
+<span style="color: #98be65;">'einundvierzig'</span>,
+<span style="color: #98be65;">'zweiundvierzig'</span>,
+<span style="color: #98be65;">'dreiundvierzig'</span>,
+<span style="color: #98be65;">'vierundvierzig'</span>,
+<span style="color: #98be65;">'f&#252;nfundvierzig'</span>,
+<span style="color: #98be65;">'sechsundvierzig'</span>,
+<span style="color: #98be65;">'siebenundvierzig'</span>,
+<span style="color: #98be65;">'achtundvierzig'</span>,
+<span style="color: #98be65;">'neunundvierzig'</span>,
+<span style="color: #98be65;">'f&#252;nfzig'</span>,
+<span style="color: #98be65;">'einundf&#252;nfzig'</span>,
+<span style="color: #98be65;">'zweiundf&#252;nfzig'</span>,
+<span style="color: #98be65;">'dreiundf&#252;nfzig'</span>,
+<span style="color: #98be65;">'vierundf&#252;nfzig'</span>,
+<span style="color: #98be65;">'f&#252;nfundf&#252;nfzig'</span>
+        ];
+addSounds()
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">addSounds</span>(){
+  sounds.forEach((sound) =&gt; {
+    <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">body</span> = document.querySelector(<span style="color: #98be65;">'body'</span>)
+    <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">soundEl</span> = document.createElement(<span style="color: #98be65;">'audio'</span>)
+    soundEl.id = sound
+    soundEl.src = <span style="color: #98be65;">`sounds/De-${sound}.ogg`</span>
+    body.appendChild(soundEl)
+  });
+}
+
 <span style="color: #51afef;">let</span> <span style="color: #dcaeea;">guessedAnswer</span> = <span style="color: #98be65;">''</span>
 <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">correctNumber</span> = getRandomNumberSound()
 <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">repeatBtn</span> = document.querySelector(<span style="color: #98be65;">'.btn.repeatBtn'</span>)
@@ -408,6 +513,7 @@ sounds.forEach(sound =&gt; {
 
 checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
 checkBtn.classList.add(<span style="color: #98be65;">'btn'</span>);
+checkBtn.classList.add (<span style="color: #98be65;">'check'</span>)
 checkBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
   <span style="color: #5B6268;">//</span><span style="color: #5B6268;">remove correct and wrong classes in case user had already guessed</span>
   checkBtn.classList.remove(<span style="color: #98be65;">'correct'</span>)
@@ -459,9 +565,10 @@ checkEl.appendChild(checkBtn)
 </div>
 </div>
 </div>
+</div>
 <div id="postamble" class="status">
 <p class="author">Author: Reflektoin</p>
-<p class="date">Created: 2023-04-16 Sun 13:30</p>
+<p class="date">Created: 2023-04-18 Tue 11:51</p>
 </div>
 </body>
 </html>
