@@ -30,6 +30,10 @@ First we'll create an index.html file.
 #+begin_src html :tangle index.html :comments link :noweb yes
 <!DOCTYPE html>
 <html lang="en">
+#+end_src
+
+#+name: head_element
+#+begin_src html :tangle index.html :comments link
 
 <head>
     <meta charset="UTF-8">
@@ -38,26 +42,58 @@ First we'll create an index.html file.
     <link rel="stylesheet" href="style.css">
     <title>Nummern hören</title>
 </head>
+#+end_src
+
+#+name: begin_body
+#+begin_src html :tangle index.html :comments link
 
 <body>
+#+end_src
+
+#+name: repeatBtn
+#+begin_src html :tangle index.html :comments link
     <div id="repeat">
         <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
-
     </div>
+#+end_src
 
+All possible answer options will be appended to the element below.
+#+name: answer_options
+#+begin_src html :tangle index.html :comments link
     <div id="buttons">
 
     </div>
+#+end_src
 
+Button for checking the answer will be added to this in script.js file.
+#+name: check_answer
+#+begin_src html :tangle index.html :comments link
     <div id="check">
-
     </div>
+#+end_src
+
+
+#+name: footer_element
+#+begin_src html :tangle index.html :comments link
     <footer>License (CC BY-SA 3.0) for sounds: <a
             href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">here</a><br>
         Source for sounds: <a href="https://de.wiktionary.org/wiki/Datei:De-eins.ogg">here</a>
     </footer>
+#+end_src
+
+Refer to the script.js file using [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script][script element]].
+#+name: script_element
+#+begin_src html :tangle index.html :comments link
     <script src="script.js"></script>
+#+end_src
+
+#+name: end_body
+#+begin_src html :tangle index.html :comments link
 </body>
+#+end_src
+
+#+name: end_html
+#+begin_src html :tangle index.html :comments link
 
 </html>
 #+end_src

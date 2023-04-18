@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-04-18 Tue 11:51 -->
+<!-- 2023-04-18 Tue 12:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>All</title>
@@ -201,26 +201,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org4c6354f">1. Description</a></li>
-<li><a href="#org3557be9">2. IDEAS</a>
+<li><a href="#orgf18532a">1. Description</a></li>
+<li><a href="#orga3d06f3">2. IDEAS</a>
 <ul>
 <li><a href="#Stylize-wiederholen-überprüfen-buttons">2.1. <span class="done DONE">DONE</span> Stylize buttons &ldquo;Wiederholen&rdquo; and &ldquo;Überprüfen&rdquo; to diffently from answer options</a></li>
 </ul>
 </li>
-<li><a href="#orgaad93b5">3. Building the page</a>
+<li><a href="#orgfd67299">3. Building the page</a>
 <ul>
-<li><a href="#orgfae74e2">3.1. Sound files</a></li>
-<li><a href="#orgfecba1a">3.2. HTML file</a></li>
-<li><a href="#org61ce520">3.3. CSS file</a></li>
-<li><a href="#org47bd49d">3.4. JavaScript file</a></li>
+<li><a href="#org555bc0b">3.1. Sound files</a></li>
+<li><a href="#org39027eb">3.2. HTML file</a></li>
+<li><a href="#org2a2fe7c">3.3. CSS file</a></li>
+<li><a href="#org622aa47">3.4. JavaScript file</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4c6354f" class="outline-2">
-<h2 id="org4c6354f"><span class="section-number-2">1.</span> Description</h2>
+<div id="outline-container-orgf18532a" class="outline-2">
+<h2 id="orgf18532a"><span class="section-number-2">1.</span> Description</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 User will hear a number by clicking the button &ldquo;Wiederholen&rdquo;.
@@ -239,8 +239,8 @@ By loading the page again another number will be quizzed.
 </div>
 
 
-<div id="outline-container-org3557be9" class="outline-2">
-<h2 id="org3557be9"><span class="section-number-2">2.</span> IDEAS</h2>
+<div id="outline-container-orga3d06f3" class="outline-2">
+<h2 id="orga3d06f3"><span class="section-number-2">2.</span> IDEAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-Stylize-wiederholen-überprüfen-buttons" class="outline-3">
@@ -251,12 +251,12 @@ By loading the page again another number will be quizzed.
 </div>
 
 
-<div id="outline-container-orgaad93b5" class="outline-2">
-<h2 id="orgaad93b5"><span class="section-number-2">3.</span> Building the page</h2>
+<div id="outline-container-orgfd67299" class="outline-2">
+<h2 id="orgfd67299"><span class="section-number-2">3.</span> Building the page</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgfae74e2" class="outline-3">
-<h3 id="orgfae74e2"><span class="section-number-3">3.1.</span> Sound files</h3>
+<div id="outline-container-org555bc0b" class="outline-3">
+<h3 id="org555bc0b"><span class="section-number-3">3.1.</span> Sound files</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The sound files are downloaded from the <a href="https://de.wiktionary.org/wiki/zwei">German wiktionary</a>. The first four numbers (zero to three) I&rsquo;ve downloaded manually, but if I&rsquo;m going to add tens of hundreds of numbers I&rsquo;d like to do it programmatically.
@@ -265,17 +265,21 @@ The sound files are downloaded from the <a href="https://de.wiktionary.org/wiki/
 </div>
 
 
-<div id="outline-container-orgfecba1a" class="outline-3">
-<h3 id="orgfecba1a"><span class="section-number-3">3.2.</span> HTML file</h3>
+<div id="outline-container-org39027eb" class="outline-3">
+<h3 id="org39027eb"><span class="section-number-3">3.2.</span> HTML file</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 First we&rsquo;ll create an index.html file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html" id="orga0667d0">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
+<pre class="src src-html" id="orged616d7">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
 &lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"en"</span>&gt;
+</pre>
+</div>
 
+<div class="org-src-container">
+<pre class="src src-html" id="orgdab15ee">
 &lt;<span style="color: #c678dd;">head</span>&gt;
     &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"UTF-8"</span>&gt;
     &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">http-equiv</span>=<span style="color: #98be65;">"X-UA-Compatible"</span> <span style="color: #dcaeea;">content</span>=<span style="color: #98be65;">"IE=edge"</span>&gt;
@@ -283,33 +287,65 @@ First we&rsquo;ll create an index.html file.
     &lt;<span style="color: #c678dd;">link</span> <span style="color: #dcaeea;">rel</span>=<span style="color: #98be65;">"stylesheet"</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"style.css"</span>&gt;
     &lt;<span style="color: #c678dd;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Nummern h&#246;ren</span>&lt;/<span style="color: #c678dd;">title</span>&gt;
 &lt;/<span style="color: #c678dd;">head</span>&gt;
+</pre>
+</div>
 
+<div class="org-src-container">
+<pre class="src src-html" id="org9385aaf">
 &lt;<span style="color: #c678dd;">body</span>&gt;
-    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"null"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-null.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"eins"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-eins.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"zwei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-zwei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"drei"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-drei.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
-    &lt;<span style="color: #c678dd;">audio</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"acht"</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"sounds/De-acht.ogg"</span>&gt;&lt;/<span style="color: #c678dd;">audio</span>&gt;
+</pre>
+</div>
 
-    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
+<div class="org-src-container">
+<pre class="src src-html" id="orgdac19c0">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
         &lt;<span style="color: #c678dd;">button</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeatBtn"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"btn repeatBtn"</span>&gt;Wiederholen&lt;/<span style="color: #c678dd;">button</span>&gt;
+    &lt;/<span style="color: #c678dd;">div</span>&gt;
+</pre>
+</div>
+
+<p>
+All possible answer options will be appended to the element below.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgcf43a9c">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
 
     &lt;/<span style="color: #c678dd;">div</span>&gt;
+</pre>
+</div>
 
-    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
-
+<p>
+Button for checking the answer will be added to this in script.js file.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="org414485e">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
     &lt;/<span style="color: #c678dd;">div</span>&gt;
+</pre>
+</div>
 
-    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
 
-    &lt;/<span style="color: #c678dd;">div</span>&gt;
-    &lt;<span style="color: #c678dd;">footer</span>&gt;License (CC BY-SA 3.0) for sounds: &lt;<span style="color: #c678dd;">a</span>
+<div class="org-src-container">
+<pre class="src src-html" id="org39cd4a7">    &lt;<span style="color: #c678dd;">footer</span>&gt;License (CC BY-SA 3.0) for sounds: &lt;<span style="color: #c678dd;">a</span>
             <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://creativecommons.org/licenses/by-sa/3.0/deed.en"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;&lt;<span style="color: #c678dd;">br</span>&gt;
         Source for sounds: &lt;<span style="color: #c678dd;">a</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://de.wiktionary.org/wiki/Datei:De-eins.ogg"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;
     &lt;/<span style="color: #c678dd;">footer</span>&gt;
-    &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
-&lt;/<span style="color: #c678dd;">body</span>&gt;
+</pre>
+</div>
 
+<p>
+Refer to the script.js file using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script element</a>.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgd5ca65c">    &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-html" id="org4a2283a">&lt;/<span style="color: #c678dd;">body</span>&gt;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-html" id="org1c4a533">
 &lt;/<span style="color: #c678dd;">html</span>&gt;
 </pre>
 </div>
@@ -321,11 +357,11 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 
-<div id="outline-container-org61ce520" class="outline-3">
-<h3 id="org61ce520"><span class="section-number-3">3.3.</span> CSS file</h3>
+<div id="outline-container-org2a2fe7c" class="outline-3">
+<h3 id="org2a2fe7c"><span class="section-number-3">3.3.</span> CSS file</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
-<pre class="src src-css" id="orgcfb011b"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
+<pre class="src src-css" id="orgd063f5d"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
 
 <span style="color: #51afef;">* </span>{
     <span style="color: #98be65;">box-sizing</span>: border-box;
@@ -412,11 +448,11 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 
-<div id="outline-container-org47bd49d" class="outline-3">
-<h3 id="org47bd49d"><span class="section-number-3">3.4.</span> JavaScript file</h3>
+<div id="outline-container-org622aa47" class="outline-3">
+<h3 id="org622aa47"><span class="section-number-3">3.4.</span> JavaScript file</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
-<pre class="src src-javascript" id="org2c24550"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>, <span style="color: #98be65;">'f&#252;nf'</span>,
+<pre class="src src-javascript" id="org2712929"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>, <span style="color: #98be65;">'f&#252;nf'</span>,
                 <span style="color: #98be65;">'sechs'</span>,
                 <span style="color: #98be65;">'sieben'</span>,
                 <span style="color: #98be65;">'acht'</span>,
@@ -568,7 +604,7 @@ checkEl.appendChild(checkBtn)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Reflektoin</p>
-<p class="date">Created: 2023-04-18 Tue 11:51</p>
+<p class="date">Created: 2023-04-18 Tue 12:06</p>
 </div>
 </body>
 </html>
