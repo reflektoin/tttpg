@@ -79,10 +79,18 @@ footer {
 
 /* [[file:all.org::repeat_id_styling][repeat_id_styling]] */
 #repeat {
-    position: absolute;
+    display: inline-block;
     top: 2.5%;
 }
 /* repeat_id_styling ends here */
+
+/* [[file:all.org::buttons-container_styling][buttons-container_styling]] */
+#buttons {
+    display: inline-block;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+/* buttons-container_styling ends here */
 
 /* [[file:all.org::btn_check_styling][btn_check_styling]] */
 .btn.check {

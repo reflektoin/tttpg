@@ -29,6 +29,13 @@ Currently a new sound is available only when page is reloaded. Provide a way to 
 
 Maybe the "Wiederholen" button could be changed to ask if user wants another number question.
 ** Design for both laptop/desktop and cellphone monitors
+** DONE Remove the overlapping of buttons
+Now answer option buttons are partially blocked by "Wiederholen" button and "Überprüfen" button is not visible unless user zooms out. This is on screen with resolution 1920x1080.
+*** Background knowledge
+Some components related to this:
+- [[*Repeat div][Repeat div]]
+- [[*Answer options][Answer options]]
+- [[*Check div][Check div]]
 
 
 * Building the page
@@ -64,13 +71,16 @@ First we'll create an index.html file.
 <body>
 #+end_src
 
-#+name: repeatBtn
+*** Repeat div
+The div with id 'repeat' acts as a container for the button with id 'repeatBtn'.
+#+name: repeatDiv
 #+begin_src html :tangle index.html :comments link
     <div id="repeat">
         <button id="repeatBtn" class="btn repeatBtn">Wiederholen</button>
     </div>
 #+end_src
 
+*** Answer options
 All possible answer options will be appended to the element below.
 #+name: answer_options
 #+begin_src html :tangle index.html :comments link
@@ -79,6 +89,7 @@ All possible answer options will be appended to the element below.
     </div>
 #+end_src
 
+*** Check div
 Button for checking the answer will be added to this in script.js file.
 #+name: check_answer
 #+begin_src html :tangle index.html :comments link
@@ -86,7 +97,7 @@ Button for checking the answer will be added to this in script.js file.
     </div>
 #+end_src
 
-
+*** Footer
 #+name: footer_element
 #+begin_src html :tangle index.html :comments link
     <footer>License (CC BY-SA 3.0) for sounds: <a
@@ -95,12 +106,15 @@ Button for checking the answer will be added to this in script.js file.
     </footer>
 #+end_src
 
+
+*** Script element
 Refer to the script.js file using [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script][script element]].
 #+name: script_element
 #+begin_src html :tangle index.html :comments link
     <script src="script.js"></script>
 #+end_src
 
+*** End body and html elements
 #+name: end_body
 #+begin_src html :tangle index.html :comments link
 </body>
@@ -126,7 +140,6 @@ Next we'll create a css file called style.css
 ,* {
     box-sizing: border-box;
 }
-
 #+end_src
 
 #+name: body_styling
@@ -213,11 +226,21 @@ This defines how the user's selected option (the button which was clicked) is be
 #+name: repeat_id_styling
 #+begin_src css :tangle style.css :comments link
 #repeat {
-    position: absolute;
+    display: inline-block;
     top: 2.5%;
 }
 #+end_src
 
+#+name: buttons-container_styling
+#+begin_src css :tangle style.css :comments link
+#buttons {
+    display: inline-block;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+
+#+end_src
 #+name: btn_check_styling
 #+begin_src css :tangle style.css :comments link
 .btn.check {
