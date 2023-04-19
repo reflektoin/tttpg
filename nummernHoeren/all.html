@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-04-19 Wed 14:47 -->
+<!-- 2023-04-19 Wed 15:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>All</title>
@@ -201,48 +201,60 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge3706f0">1. Description</a></li>
-<li><a href="#org8361786">2. IDEAS</a>
+<li><a href="#orge57048b">1. Description</a></li>
+<li><a href="#org0292890">2. IDEAS</a>
 <ul>
 <li><a href="#Stylize-wiederholen-überprüfen-buttons">2.1. <span class="done DONE">DONE</span> Stylize buttons &ldquo;Wiederholen&rdquo; and &ldquo;Überprüfen&rdquo; to diffently from answer options</a></li>
-<li><a href="#orgf95dd41">2.2. Reduce number of answer options</a></li>
-<li><a href="#orge2e55c1">2.3. Generate random answer options</a></li>
-<li><a href="#orgc369388">2.4. Add option quiz specific set of numbers</a></li>
-<li><a href="#org3d5c77a">2.5. Add option to quiz specific range of numbers</a></li>
-<li><a href="#org3331bdc">2.6. Split js<sub>file</sub> code block into separate blocks</a></li>
-<li><a href="#org6a7edff">2.7. Change vocabulary used to match Multiple choice terminology</a></li>
-<li><a href="#org574a5c2">2.8. Provide a way to quiz another sound?</a></li>
-<li><a href="#orgc08d658">2.9. Design for both laptop/desktop and cellphone monitors</a></li>
-<li><a href="#org4a56a03">2.10. <span class="done DONE">DONE</span> Remove the overlapping of buttons</a>
+<li><a href="#org03a5564">2.2. Reduce number of answer options</a></li>
+<li><a href="#orgc4a54cf">2.3. Generate random answer options</a></li>
+<li><a href="#org81cb13d">2.4. Add option quiz specific set of numbers</a></li>
+<li><a href="#orga606308">2.5. Add option to quiz specific range of numbers</a></li>
+<li><a href="#org1a5423f">2.6. <span class="done DONE">DONE</span> Split js<sub>file</sub> code block into separate blocks</a></li>
+<li><a href="#org14e45d2">2.7. Change vocabulary used to match Multiple choice terminology</a></li>
+<li><a href="#orgc2e62eb">2.8. Provide a way to quiz another sound?</a></li>
+<li><a href="#orgffb9d38">2.9. Design for both laptop/desktop and cellphone monitors</a></li>
+<li><a href="#orgc13e25b">2.10. <span class="done DONE">DONE</span> Remove the overlapping of buttons</a>
 <ul>
-<li><a href="#orgf64abe2">2.10.1. Background knowledge</a></li>
+<li><a href="#org6083920">2.10.1. Background knowledge</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgff4ab9b">3. Building the page</a>
+<li><a href="#orgfb9ea9e">3. Building the page</a>
 <ul>
-<li><a href="#org2b1d8aa">3.1. Sound files</a></li>
-<li><a href="#orgb8cd53d">3.2. HTML file</a>
+<li><a href="#org01bf4c7">3.1. Sound files</a></li>
+<li><a href="#orga723d17">3.2. HTML file</a>
 <ul>
-<li><a href="#org364dd82">3.2.1. Repeat div</a></li>
-<li><a href="#org509b6a4">3.2.2. Answer options</a></li>
-<li><a href="#orgc0a6367">3.2.3. Check div</a></li>
-<li><a href="#org5cb1c47">3.2.4. Footer</a></li>
-<li><a href="#org73df042">3.2.5. Script element</a></li>
-<li><a href="#orgb8c5a13">3.2.6. End body and html elements</a></li>
+<li><a href="#org922ff44">3.2.1. Repeat div</a></li>
+<li><a href="#orge63b8c1">3.2.2. Answer options</a></li>
+<li><a href="#org9a79015">3.2.3. Check div</a></li>
+<li><a href="#orgf38ad83">3.2.4. Footer</a></li>
+<li><a href="#org8c52d4b">3.2.5. Script element</a></li>
+<li><a href="#org2215c4f">3.2.6. End body and html elements</a></li>
 </ul>
 </li>
-<li><a href="#org0608f54">3.3. CSS file</a></li>
-<li><a href="#org685ee87">3.4. JavaScript file</a></li>
+<li><a href="#org13fc3f6">3.3. CSS file</a></li>
+<li><a href="#orgc2e551e">3.4. JavaScript file</a>
+<ul>
+<li><a href="#org666386e">3.4.1. AddSounds function definition and call</a></li>
+<li><a href="#orgcc1263c">3.4.2. Variable definitions</a></li>
+<li><a href="#orgf66197f">3.4.3. Generate and add sound buttons</a></li>
+<li><a href="#org238c524">3.4.4. Generate and add check button</a></li>
+<li><a href="#org1e4da77">3.4.5. stopSongs function definition</a></li>
+<li><a href="#orga890ba3">3.4.6. getRandomNumberSound</a></li>
+<li><a href="#org00cc5f8">3.4.7. clearSelection definition</a></li>
+<li><a href="#orgac28c03">3.4.8. resetCheckBtn definition</a></li>
+<li><a href="#orga1a2d53">3.4.9. Add eventListener to repeatBtn</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge3706f0" class="outline-2">
-<h2 id="orge3706f0"><span class="section-number-2">1.</span> Description</h2>
+<div id="outline-container-orge57048b" class="outline-2">
+<h2 id="orge57048b"><span class="section-number-2">1.</span> Description</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 User will hear a number by clicking the button &ldquo;Wiederholen&rdquo;.
@@ -261,8 +273,8 @@ By loading the page again another number will be quizzed.
 </div>
 
 
-<div id="outline-container-org8361786" class="outline-2">
-<h2 id="org8361786"><span class="section-number-2">2.</span> IDEAS</h2>
+<div id="outline-container-org0292890" class="outline-2">
+<h2 id="org0292890"><span class="section-number-2">2.</span> IDEAS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-Stylize-wiederholen-überprüfen-buttons" class="outline-3">
@@ -270,41 +282,41 @@ By loading the page again another number will be quizzed.
 <div class="outline-text-3" id="text-Stylize-wiederholen-überprüfen-buttons">
 </div>
 </div>
-<div id="outline-container-orgf95dd41" class="outline-3">
-<h3 id="orgf95dd41"><span class="section-number-3">2.2.</span> Reduce number of answer options</h3>
+<div id="outline-container-org03a5564" class="outline-3">
+<h3 id="org03a5564"><span class="section-number-3">2.2.</span> Reduce number of answer options</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Now &ldquo;Wiederholen&rdquo; button overlaps with some of the choice options.
 </p>
 </div>
 </div>
-<div id="outline-container-orge2e55c1" class="outline-3">
-<h3 id="orge2e55c1"><span class="section-number-3">2.3.</span> Generate random answer options</h3>
+<div id="outline-container-orgc4a54cf" class="outline-3">
+<h3 id="orgc4a54cf"><span class="section-number-3">2.3.</span> Generate random answer options</h3>
 </div>
-<div id="outline-container-orgc369388" class="outline-3">
-<h3 id="orgc369388"><span class="section-number-3">2.4.</span> Add option quiz specific set of numbers</h3>
+<div id="outline-container-org81cb13d" class="outline-3">
+<h3 id="org81cb13d"><span class="section-number-3">2.4.</span> Add option quiz specific set of numbers</h3>
 </div>
-<div id="outline-container-org3d5c77a" class="outline-3">
-<h3 id="org3d5c77a"><span class="section-number-3">2.5.</span> Add option to quiz specific range of numbers</h3>
+<div id="outline-container-orga606308" class="outline-3">
+<h3 id="orga606308"><span class="section-number-3">2.5.</span> Add option to quiz specific range of numbers</h3>
 </div>
-<div id="outline-container-org3331bdc" class="outline-3">
-<h3 id="org3331bdc"><span class="section-number-3">2.6.</span> Split js<sub>file</sub> code block into separate blocks</h3>
+<div id="outline-container-org1a5423f" class="outline-3">
+<h3 id="org1a5423f"><span class="section-number-3">2.6.</span> <span class="done DONE">DONE</span> Split js<sub>file</sub> code block into separate blocks</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Split related rows into their own blocks. Aim is to make it easier to refer to them and comment on them.
 </p>
 </div>
 </div>
-<div id="outline-container-org6a7edff" class="outline-3">
-<h3 id="org6a7edff"><span class="section-number-3">2.7.</span> Change vocabulary used to match Multiple choice terminology</h3>
+<div id="outline-container-org14e45d2" class="outline-3">
+<h3 id="org14e45d2"><span class="section-number-3">2.7.</span> Change vocabulary used to match Multiple choice terminology</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 Currently source code contains haphazardly used vocabulary/terminology. Maybe aim could be to talk about concepts using words in Wikipedia&rsquo;s <a href="https://en.wikipedia.org/wiki/Multiple_choice">multiple choice article</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-org574a5c2" class="outline-3">
-<h3 id="org574a5c2"><span class="section-number-3">2.8.</span> Provide a way to quiz another sound?</h3>
+<div id="outline-container-orgc2e62eb" class="outline-3">
+<h3 id="orgc2e62eb"><span class="section-number-3">2.8.</span> Provide a way to quiz another sound?</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Currently a new sound is available only when page is reloaded. Provide a way to get a new question without reloading. For example a button to play another sound.
@@ -315,39 +327,38 @@ Maybe the &ldquo;Wiederholen&rdquo; button could be changed to ask if user wants
 </p>
 </div>
 </div>
-<div id="outline-container-orgc08d658" class="outline-3">
-<h3 id="orgc08d658"><span class="section-number-3">2.9.</span> Design for both laptop/desktop and cellphone monitors</h3>
+<div id="outline-container-orgffb9d38" class="outline-3">
+<h3 id="orgffb9d38"><span class="section-number-3">2.9.</span> Design for both laptop/desktop and cellphone monitors</h3>
 </div>
-<div id="outline-container-org4a56a03" class="outline-3">
-<h3 id="org4a56a03"><span class="section-number-3">2.10.</span> <span class="done DONE">DONE</span> Remove the overlapping of buttons</h3>
+<div id="outline-container-orgc13e25b" class="outline-3">
+<h3 id="orgc13e25b"><span class="section-number-3">2.10.</span> <span class="done DONE">DONE</span> Remove the overlapping of buttons</h3>
 <div class="outline-text-3" id="text-2-10">
 <p>
 Now answer option buttons are partially blocked by &ldquo;Wiederholen&rdquo; button and &ldquo;Überprüfen&rdquo; button is not visible unless user zooms out. This is on screen with resolution 1920x1080.
 </p>
 </div>
-<div id="outline-container-orgf64abe2" class="outline-4">
-<h4 id="orgf64abe2"><span class="section-number-4">2.10.1.</span> Background knowledge</h4>
+<div id="outline-container-org6083920" class="outline-4">
+<h4 id="org6083920"><span class="section-number-4">2.10.1.</span> Background knowledge</h4>
 <div class="outline-text-4" id="text-2-10-1">
 <p>
 Some components related to this:
 </p>
 <ul class="org-ul">
-<li><a href="#org364dd82">Repeat div</a></li>
-<li><a href="#org509b6a4">Answer options</a></li>
-<li><a href="#orgc0a6367">Check div</a></li>
+<li><a href="#org922ff44">Repeat div</a></li>
+<li><a href="#orge63b8c1">Answer options</a></li>
+<li><a href="#org9a79015">Check div</a></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 
-
-<div id="outline-container-orgff4ab9b" class="outline-2">
-<h2 id="orgff4ab9b"><span class="section-number-2">3.</span> Building the page</h2>
+<div id="outline-container-orgfb9ea9e" class="outline-2">
+<h2 id="orgfb9ea9e"><span class="section-number-2">3.</span> Building the page</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org2b1d8aa" class="outline-3">
-<h3 id="org2b1d8aa"><span class="section-number-3">3.1.</span> Sound files</h3>
+<div id="outline-container-org01bf4c7" class="outline-3">
+<h3 id="org01bf4c7"><span class="section-number-3">3.1.</span> Sound files</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The sound files are downloaded from the <a href="https://de.wiktionary.org/wiki/zwei">German wiktionary</a>. The first four numbers (zero to three) I&rsquo;ve downloaded manually, but if I&rsquo;m going to add tens of hundreds of numbers I&rsquo;d like to do it programmatically.
@@ -356,21 +367,21 @@ The sound files are downloaded from the <a href="https://de.wiktionary.org/wiki/
 </div>
 
 
-<div id="outline-container-orgb8cd53d" class="outline-3">
-<h3 id="orgb8cd53d"><span class="section-number-3">3.2.</span> HTML file</h3>
+<div id="outline-container-orga723d17" class="outline-3">
+<h3 id="orga723d17"><span class="section-number-3">3.2.</span> HTML file</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 First we&rsquo;ll create an index.html file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html" id="org97f5381">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
+<pre class="src src-html" id="org403e5c4">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;
 &lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"en"</span>&gt;
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-html" id="org8fafd53">
+<pre class="src src-html" id="orgd054578">
 &lt;<span style="color: #c678dd;">head</span>&gt;
     &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"UTF-8"</span>&gt;
     &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">http-equiv</span>=<span style="color: #98be65;">"X-UA-Compatible"</span> <span style="color: #dcaeea;">content</span>=<span style="color: #98be65;">"IE=edge"</span>&gt;
@@ -382,20 +393,20 @@ First we&rsquo;ll create an index.html file.
 </div>
 
 <div class="org-src-container">
-<pre class="src src-html" id="org02481eb">
+<pre class="src src-html" id="orga61c842">
 &lt;<span style="color: #c678dd;">body</span>&gt;
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org364dd82" class="outline-4">
-<h4 id="org364dd82"><span class="section-number-4">3.2.1.</span> Repeat div</h4>
+<div id="outline-container-org922ff44" class="outline-4">
+<h4 id="org922ff44"><span class="section-number-4">3.2.1.</span> Repeat div</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 The div with id &rsquo;repeat&rsquo; acts as a container for the button with id &rsquo;repeatBtn&rsquo;.
 </p>
 <div class="org-src-container">
-<pre class="src src-html" id="orga77237e">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
+<pre class="src src-html" id="org1f156d5">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeat"</span>&gt;
         &lt;<span style="color: #c678dd;">button</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"repeatBtn"</span> <span style="color: #dcaeea;">class</span>=<span style="color: #98be65;">"btn repeatBtn"</span>&gt;Wiederholen&lt;/<span style="color: #c678dd;">button</span>&gt;
     &lt;/<span style="color: #c678dd;">div</span>&gt;
 </pre>
@@ -403,14 +414,14 @@ The div with id &rsquo;repeat&rsquo; acts as a container for the button with id 
 </div>
 </div>
 
-<div id="outline-container-org509b6a4" class="outline-4">
-<h4 id="org509b6a4"><span class="section-number-4">3.2.2.</span> Answer options</h4>
+<div id="outline-container-orge63b8c1" class="outline-4">
+<h4 id="orge63b8c1"><span class="section-number-4">3.2.2.</span> Answer options</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 All possible answer options will be appended to the element below.
 </p>
 <div class="org-src-container">
-<pre class="src src-html" id="orgd9ef4d4">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
+<pre class="src src-html" id="orgd86c3c1">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"buttons"</span>&gt;
 
     &lt;/<span style="color: #c678dd;">div</span>&gt;
 </pre>
@@ -418,25 +429,25 @@ All possible answer options will be appended to the element below.
 </div>
 </div>
 
-<div id="outline-container-orgc0a6367" class="outline-4">
-<h4 id="orgc0a6367"><span class="section-number-4">3.2.3.</span> Check div</h4>
+<div id="outline-container-org9a79015" class="outline-4">
+<h4 id="org9a79015"><span class="section-number-4">3.2.3.</span> Check div</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <p>
 Button for checking the answer will be added to this in script.js file.
 </p>
 <div class="org-src-container">
-<pre class="src src-html" id="org6500e77">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
+<pre class="src src-html" id="orgfdd6e3d">    &lt;<span style="color: #c678dd;">div</span> <span style="color: #dcaeea;">id</span>=<span style="color: #98be65;">"check"</span>&gt;
     &lt;/<span style="color: #c678dd;">div</span>&gt;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5cb1c47" class="outline-4">
-<h4 id="org5cb1c47"><span class="section-number-4">3.2.4.</span> Footer</h4>
+<div id="outline-container-orgf38ad83" class="outline-4">
+<h4 id="orgf38ad83"><span class="section-number-4">3.2.4.</span> Footer</h4>
 <div class="outline-text-4" id="text-3-2-4">
 <div class="org-src-container">
-<pre class="src src-html" id="org0ceb2b8">    &lt;<span style="color: #c678dd;">footer</span>&gt;License (CC BY-SA 3.0) for sounds: &lt;<span style="color: #c678dd;">a</span>
+<pre class="src src-html" id="org609290f">    &lt;<span style="color: #c678dd;">footer</span>&gt;License (CC BY-SA 3.0) for sounds: &lt;<span style="color: #c678dd;">a</span>
             <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://creativecommons.org/licenses/by-sa/3.0/deed.en"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;&lt;<span style="color: #c678dd;">br</span>&gt;
         Source for sounds: &lt;<span style="color: #c678dd;">a</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"https://de.wiktionary.org/wiki/Datei:De-eins.ogg"</span>&gt;here&lt;/<span style="color: #c678dd;">a</span>&gt;
     &lt;/<span style="color: #c678dd;">footer</span>&gt;
@@ -446,29 +457,29 @@ Button for checking the answer will be added to this in script.js file.
 </div>
 
 
-<div id="outline-container-org73df042" class="outline-4">
-<h4 id="org73df042"><span class="section-number-4">3.2.5.</span> Script element</h4>
+<div id="outline-container-org8c52d4b" class="outline-4">
+<h4 id="org8c52d4b"><span class="section-number-4">3.2.5.</span> Script element</h4>
 <div class="outline-text-4" id="text-3-2-5">
 <p>
 Refer to the script.js file using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">script element</a>.
 </p>
 <div class="org-src-container">
-<pre class="src src-html" id="orgfa25fc6">    &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
+<pre class="src src-html" id="org0ecb5f4">    &lt;<span style="color: #c678dd;">script</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"script.js"</span>&gt;&lt;/<span style="color: #c678dd;">script</span>&gt;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb8c5a13" class="outline-4">
-<h4 id="orgb8c5a13"><span class="section-number-4">3.2.6.</span> End body and html elements</h4>
+<div id="outline-container-org2215c4f" class="outline-4">
+<h4 id="org2215c4f"><span class="section-number-4">3.2.6.</span> End body and html elements</h4>
 <div class="outline-text-4" id="text-3-2-6">
 <div class="org-src-container">
-<pre class="src src-html" id="org58733e3">&lt;/<span style="color: #c678dd;">body</span>&gt;
+<pre class="src src-html" id="orgb3e7694">&lt;/<span style="color: #c678dd;">body</span>&gt;
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-html" id="orgc86ebb6">
+<pre class="src src-html" id="org3a77e4f">
 &lt;/<span style="color: #c678dd;">html</span>&gt;
 </pre>
 </div>
@@ -481,23 +492,23 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 
-<div id="outline-container-org0608f54" class="outline-3">
-<h3 id="org0608f54"><span class="section-number-3">3.3.</span> CSS file</h3>
+<div id="outline-container-org13fc3f6" class="outline-3">
+<h3 id="org13fc3f6"><span class="section-number-3">3.3.</span> CSS file</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
-<pre class="src src-css" id="org568729e"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
+<pre class="src src-css" id="org5f87b6f"><span style="color: #c678dd;">@import</span> url(<span style="color: #98be65;">'https://fonts.googleapis.com/css?family=Ubuntu'</span>);
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org0a40cea"><span style="color: #51afef;">* </span>{
+<pre class="src src-css" id="org64919db"><span style="color: #51afef;">* </span>{
     <span style="color: #98be65;">box-sizing</span>: border-box;
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="orgca2ca38"><span style="color: #51afef;">body </span>{
+<pre class="src src-css" id="org9e61b28"><span style="color: #51afef;">body </span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #a164df;">rgb(161,100,223)</span>;
     <span style="color: #98be65;">font-family</span>: <span style="color: #98be65;">'Ubuntu'</span>, sans-serif;
     <span style="color: #98be65;">display</span>: flex;
@@ -514,7 +525,7 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="orga2e8baa"><span style="color: #51afef;">footer </span>{
+<pre class="src src-css" id="org703acb2"><span style="color: #51afef;">footer </span>{
     <span style="color: #98be65;">position</span>: absolute;
     <span style="color: #98be65;">bottom</span>: 10px;
 }
@@ -522,7 +533,7 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org72e543d"><span style="color: #51afef;">.btn </span>{
+<pre class="src src-css" id="orgf8f41dd"><span style="color: #51afef;">.btn </span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #663399;">rebeccapurple</span>;
     <span style="color: #98be65;">border-radius</span>: 5px;
     <span style="color: #98be65;">border</span>: none;
@@ -537,7 +548,7 @@ Next we&rsquo;ll create a css file called style.css
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org24be68b"><span style="color: #51afef;">.btn.repeatBtn</span>{
+<pre class="src src-css" id="orgf5cfd51"><span style="color: #51afef;">.btn.repeatBtn</span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #444444;">#444444</span>;
     <span style="color: #98be65;">font-size</span>: 2rem;
 
@@ -549,14 +560,14 @@ Next we&rsquo;ll create a css file called style.css
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover">https://developer.mozilla.org/en-US/docs/Web/CSS/:hover</a>
 </p>
 <div class="org-src-container">
-<pre class="src src-css" id="org5ea55a6"><span style="color: #51afef;">.btn:hover </span>{
+<pre class="src src-css" id="orge942a38"><span style="color: #51afef;">.btn:hover </span>{
     <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.9</span>;
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org8d36a91"><span style="color: #51afef;">.btn:focus </span>{
+<pre class="src src-css" id="org46c6153"><span style="color: #51afef;">.btn:focus </span>{
     <span style="color: #98be65;">outline</span>: none;
 }
 </pre>
@@ -567,7 +578,7 @@ Next we&rsquo;ll create a css file called style.css
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active">https://developer.mozilla.org/en-US/docs/Web/CSS/:active</a>
 </p>
 <div class="org-src-container">
-<pre class="src src-css" id="org084eeea"><span style="color: #51afef;">.btn:active </span>{
+<pre class="src src-css" id="orgbff5679"><span style="color: #51afef;">.btn:active </span>{
     <span style="color: #98be65;">scale</span>: <span style="color: #da8548; font-weight: bold;">0.95</span>;
 }
 </pre>
@@ -577,14 +588,14 @@ Next we&rsquo;ll create a css file called style.css
 This defines how the user&rsquo;s selected option (the button which was clicked) is being stylized.
 </p>
 <div class="org-src-container">
-<pre class="src src-css" id="org8034a2d"><span style="color: #51afef;">.btn.selected </span>{
+<pre class="src src-css" id="orgf1903b5"><span style="color: #51afef;">.btn.selected </span>{
     <span style="color: #98be65;">opacity</span>: <span style="color: #da8548; font-weight: bold;">0.5</span>;
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org74768dc"><span style="color: #51afef;">#repeat </span>{
+<pre class="src src-css" id="orge194f89"><span style="color: #51afef;">#repeat </span>{
     <span style="color: #98be65;">display</span>: inline-block;
     <span style="color: #98be65;">top</span>: <span style="color: #da8548; font-weight: bold;">2.5</span>%;
 }
@@ -592,7 +603,7 @@ This defines how the user&rsquo;s selected option (the button which was clicked)
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="orgc5f0d33"><span style="color: #51afef;">#buttons </span>{
+<pre class="src src-css" id="orgcfec366"><span style="color: #51afef;">#buttons </span>{
     <span style="color: #98be65;">display</span>: inline-block;
     <span style="color: #98be65;">overflow-y</span>: scroll;
     <span style="color: #98be65;">max-height</span>: 500px;
@@ -602,7 +613,7 @@ This defines how the user&rsquo;s selected option (the button which was clicked)
 </pre>
 </div>
 <div class="org-src-container">
-<pre class="src src-css" id="org052580e"><span style="color: #51afef;">.btn.check </span>{
+<pre class="src src-css" id="orgef7ff28"><span style="color: #51afef;">.btn.check </span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #1739dd;">#1739dd</span>;
     <span style="color: #98be65;">margin</span>: 50px;
 }
@@ -610,14 +621,14 @@ This defines how the user&rsquo;s selected option (the button which was clicked)
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="org7d41bc1"><span style="color: #51afef;">.btn.check.wrong </span>{
+<pre class="src src-css" id="org10547ae"><span style="color: #51afef;">.btn.check.wrong </span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
 }
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-css" id="orgba12cd0"><span style="color: #51afef;">.btn.correct</span>{
+<pre class="src src-css" id="org1eec6e9"><span style="color: #51afef;">.btn.correct</span>{
     <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
 }
 </pre>
@@ -628,7 +639,7 @@ This defines how the user&rsquo;s selected option (the button which was clicked)
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">https://developer.mozilla.org/en-US/docs/Web/CSS/@media</a>
 </p>
 <div class="org-src-container">
-<pre class="src src-css" id="org89f02a8"><span style="color: #c678dd;">@media</span>(max-width: 500px){
+<pre class="src src-css" id="org2bee59d"><span style="color: #c678dd;">@media</span>(max-width: 500px){
     <span style="color: #51afef;">.btn </span>{
         <span style="color: #98be65;">font-size</span>: 0.8rem;
     }
@@ -639,64 +650,77 @@ This defines how the user&rsquo;s selected option (the button which was clicked)
 </div>
 
 
-<div id="outline-container-org685ee87" class="outline-3">
-<h3 id="org685ee87"><span class="section-number-3">3.4.</span> JavaScript file</h3>
+<div id="outline-container-orgc2e551e" class="outline-3">
+<h3 id="orgc2e551e"><span class="section-number-3">3.4.</span> JavaScript file</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
-<pre class="src src-javascript" id="orgdb0522a"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [<span style="color: #98be65;">'null'</span>, <span style="color: #98be65;">'eins'</span>, <span style="color: #98be65;">'zwei'</span>, <span style="color: #98be65;">'drei'</span>, <span style="color: #98be65;">'f&#252;nf'</span>,
-                <span style="color: #98be65;">'sechs'</span>,
-                <span style="color: #98be65;">'sieben'</span>,
-                <span style="color: #98be65;">'acht'</span>,
-                <span style="color: #98be65;">'neun'</span>,
-                <span style="color: #98be65;">'zehn'</span>,
-                <span style="color: #98be65;">'elf'</span>,
-                <span style="color: #98be65;">'zw&#246;lf'</span>,
-                <span style="color: #98be65;">'dreizehn'</span>,
-<span style="color: #98be65;">'vierzehn'</span>,
-<span style="color: #98be65;">'f&#252;nfzehn'</span>,
-<span style="color: #98be65;">'sechzehn'</span>,
-<span style="color: #98be65;">'siebzehn'</span>,
-<span style="color: #98be65;">'achtzehn'</span>,
-<span style="color: #98be65;">'neunzehn'</span>,
-<span style="color: #98be65;">'zwanzig'</span>,
-<span style="color: #98be65;">'einundzwanzig'</span>,
-<span style="color: #98be65;">'zweiundzwanzig'</span>,
-<span style="color: #98be65;">'dreiundzwanzig'</span>,
-<span style="color: #98be65;">'vierundzwanzig'</span>,
-<span style="color: #98be65;">'f&#252;nfundzwanzig'</span>,
-<span style="color: #98be65;">'sechsundzwanzig'</span>,
-<span style="color: #98be65;">'siebenundzwanzig'</span>,
-<span style="color: #98be65;">'achtundzwanzig'</span>,
-<span style="color: #98be65;">'neunundzwanzig'</span>,
-<span style="color: #98be65;">'drei&#223;ig'</span>,
-<span style="color: #98be65;">'einunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'zweiunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'dreiunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'vierunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'f&#252;nfunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'sechsunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'siebenunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'achtunddrei&#223;ig'</span>,
-<span style="color: #98be65;">'neununddrei&#223;ig'</span>,
-<span style="color: #98be65;">'vierzig'</span>,
-<span style="color: #98be65;">'einundvierzig'</span>,
-<span style="color: #98be65;">'zweiundvierzig'</span>,
-<span style="color: #98be65;">'dreiundvierzig'</span>,
-<span style="color: #98be65;">'vierundvierzig'</span>,
-<span style="color: #98be65;">'f&#252;nfundvierzig'</span>,
-<span style="color: #98be65;">'sechsundvierzig'</span>,
-<span style="color: #98be65;">'siebenundvierzig'</span>,
-<span style="color: #98be65;">'achtundvierzig'</span>,
-<span style="color: #98be65;">'neunundvierzig'</span>,
-<span style="color: #98be65;">'f&#252;nfzig'</span>,
-<span style="color: #98be65;">'einundf&#252;nfzig'</span>,
-<span style="color: #98be65;">'zweiundf&#252;nfzig'</span>,
-<span style="color: #98be65;">'dreiundf&#252;nfzig'</span>,
-<span style="color: #98be65;">'vierundf&#252;nfzig'</span>,
-<span style="color: #98be65;">'f&#252;nfundf&#252;nfzig'</span>
-        ];
-addSounds()
-<span style="color: #51afef;">function</span> <span style="color: #c678dd;">addSounds</span>(){
+<pre class="src src-javascript" id="org0032852"><span style="color: #51afef;">const</span> <span style="color: #dcaeea;">sounds</span> = [
+  <span style="color: #98be65;">'null'</span>,
+  <span style="color: #98be65;">'eins'</span>,
+  <span style="color: #98be65;">'zwei'</span>,
+  <span style="color: #98be65;">'drei'</span>,
+  <span style="color: #98be65;">'f&#252;nf'</span>,
+  <span style="color: #98be65;">'sechs'</span>,
+  <span style="color: #98be65;">'sieben'</span>,
+  <span style="color: #98be65;">'acht'</span>,
+  <span style="color: #98be65;">'neun'</span>,
+  <span style="color: #98be65;">'zehn'</span>,
+  <span style="color: #98be65;">'elf'</span>,
+  <span style="color: #98be65;">'zw&#246;lf'</span>,
+  <span style="color: #98be65;">'dreizehn'</span>,
+  <span style="color: #98be65;">'vierzehn'</span>,
+  <span style="color: #98be65;">'f&#252;nfzehn'</span>,
+  <span style="color: #98be65;">'sechzehn'</span>,
+  <span style="color: #98be65;">'siebzehn'</span>,
+  <span style="color: #98be65;">'achtzehn'</span>,
+  <span style="color: #98be65;">'neunzehn'</span>,
+  <span style="color: #98be65;">'zwanzig'</span>,
+  <span style="color: #98be65;">'einundzwanzig'</span>,
+  <span style="color: #98be65;">'zweiundzwanzig'</span>,
+  <span style="color: #98be65;">'dreiundzwanzig'</span>,
+  <span style="color: #98be65;">'vierundzwanzig'</span>,
+  <span style="color: #98be65;">'f&#252;nfundzwanzig'</span>,
+  <span style="color: #98be65;">'sechsundzwanzig'</span>,
+  <span style="color: #98be65;">'siebenundzwanzig'</span>,
+  <span style="color: #98be65;">'achtundzwanzig'</span>,
+  <span style="color: #98be65;">'neunundzwanzig'</span>,
+  <span style="color: #98be65;">'drei&#223;ig'</span>,
+  <span style="color: #98be65;">'einunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'zweiunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'dreiunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'vierunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'f&#252;nfunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'sechsunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'siebenunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'achtunddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'neununddrei&#223;ig'</span>,
+  <span style="color: #98be65;">'vierzig'</span>,
+  <span style="color: #98be65;">'einundvierzig'</span>,
+  <span style="color: #98be65;">'zweiundvierzig'</span>,
+  <span style="color: #98be65;">'dreiundvierzig'</span>,
+  <span style="color: #98be65;">'vierundvierzig'</span>,
+  <span style="color: #98be65;">'f&#252;nfundvierzig'</span>,
+  <span style="color: #98be65;">'sechsundvierzig'</span>,
+  <span style="color: #98be65;">'siebenundvierzig'</span>,
+  <span style="color: #98be65;">'achtundvierzig'</span>,
+  <span style="color: #98be65;">'neunundvierzig'</span>,
+  <span style="color: #98be65;">'f&#252;nfzig'</span>,
+  <span style="color: #98be65;">'einundf&#252;nfzig'</span>,
+  <span style="color: #98be65;">'zweiundf&#252;nfzig'</span>,
+  <span style="color: #98be65;">'dreiundf&#252;nfzig'</span>,
+  <span style="color: #98be65;">'vierundf&#252;nfzig'</span>,
+  <span style="color: #98be65;">'f&#252;nfundf&#252;nfzig'</span>
+];
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org666386e" class="outline-4">
+<h4 id="org666386e"><span class="section-number-4">3.4.1.</span> AddSounds function definition and call</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orga7b47eb">addSounds()
+<span style="color: #51afef;">function</span> <span style="color: #c678dd;">addSounds</span>() {
   sounds.forEach((sound) =&gt; {
     <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">body</span> = document.querySelector(<span style="color: #98be65;">'body'</span>)
     <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">soundEl</span> = document.createElement(<span style="color: #98be65;">'audio'</span>)
@@ -706,14 +730,31 @@ addSounds()
   });
 }
 
-<span style="color: #51afef;">let</span> <span style="color: #dcaeea;">guessedAnswer</span> = <span style="color: #98be65;">''</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc1263c" class="outline-4">
+<h4 id="orgcc1263c"><span class="section-number-4">3.4.2.</span> Variable definitions</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org822cc09"><span style="color: #51afef;">let</span> <span style="color: #dcaeea;">guessedAnswer</span> = <span style="color: #98be65;">''</span>
 <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">correctNumber</span> = getRandomNumberSound()
 <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">repeatBtn</span> = document.querySelector(<span style="color: #98be65;">'.btn.repeatBtn'</span>)
-console.log(repeatBtn)
-repeatBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
-  document.getElementById(sounds[correctNumber]).play()
-})
-sounds.forEach(sound =&gt; {
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkEl</span> = document.getElementById(<span style="color: #98be65;">'check'</span>)
+<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkBtn</span> = document.createElement(<span style="color: #98be65;">'button'</span>)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf66197f" class="outline-4">
+<h4 id="orgf66197f"><span class="section-number-4">3.4.3.</span> Generate and add sound buttons</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org59a08fa">sounds.forEach(sound =&gt; {
   <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">btn</span> = document.createElement(<span style="color: #98be65;">'button'</span>)
   btn.classList.add(<span style="color: #98be65;">'btn'</span>);
   btn.classList.add(<span style="color: #98be65;">'options'</span>);
@@ -734,13 +775,18 @@ sounds.forEach(sound =&gt; {
   document.getElementById(<span style="color: #98be65;">'buttons'</span>).
     appendChild(btn);
 })
+</pre>
+</div>
+</div>
+</div>
 
-<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkEl</span> = document.getElementById(<span style="color: #98be65;">'check'</span>)
-<span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkBtn</span> = document.createElement(<span style="color: #98be65;">'button'</span>)
-
-checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
+<div id="outline-container-org238c524" class="outline-4">
+<h4 id="org238c524"><span class="section-number-4">3.4.4.</span> Generate and add check button</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgbd88645">checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
 checkBtn.classList.add(<span style="color: #98be65;">'btn'</span>);
-checkBtn.classList.add (<span style="color: #98be65;">'check'</span>)
+checkBtn.classList.add(<span style="color: #98be65;">'check'</span>)
 checkBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
   <span style="color: #5B6268;">//</span><span style="color: #5B6268;">remove correct and wrong classes in case user had already guessed</span>
   checkBtn.classList.remove(<span style="color: #98be65;">'correct'</span>)
@@ -758,31 +804,83 @@ checkBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt;
     checkBtn.innerText = <span style="color: #98be65;">'Versuch nochmal'</span>
   }
 })
-
 checkEl.appendChild(checkBtn)
+</pre>
+</div>
+</div>
+</div>
 
-<span style="color: #51afef;">function</span> <span style="color: #c678dd;">stopSongs</span>() {
+
+<div id="outline-container-org1e4da77" class="outline-4">
+<h4 id="org1e4da77"><span class="section-number-4">3.4.5.</span> stopSongs function definition</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+This is used to stop playing sounds.
+Scenario: User tries to play another sound while previous one is still playing. The program then stops the first sound so that only one sound will be played at a time.
+</p>
+
+<p>
+Used in:
+</p>
+<ul class="org-ul">
+<li><a href="#orgf66197f">Generate and add sound buttons</a></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="org174b7a8"><span style="color: #51afef;">function</span> <span style="color: #c678dd;">stopSongs</span>() {
   sounds.forEach(sound =&gt; {
     <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">song</span> = document.getElementById(sound)
     song.pause();
     song.currentTime = <span style="color: #da8548; font-weight: bold;">0</span>;
   })
 }
+</pre>
+</div>
+</div>
+</div>
 
-<span style="color: #51afef;">function</span> <span style="color: #c678dd;">getRandomNumberSound</span>() {
+
+<div id="outline-container-orga890ba3" class="outline-4">
+<h4 id="orga890ba3"><span class="section-number-4">3.4.6.</span> getRandomNumberSound</h4>
+<div class="outline-text-4" id="text-3-4-6">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org7c7ed50"><span style="color: #51afef;">function</span> <span style="color: #c678dd;">getRandomNumberSound</span>() {
   <span style="color: #51afef;">return</span> Math.floor(Math.random() * sounds.length)
 }
+</pre>
+</div>
+</div>
+</div>
 
-<span style="color: #51afef;">function</span> <span style="color: #c678dd;">clearSelection</span>() {
+
+<div id="outline-container-org00cc5f8" class="outline-4">
+<h4 id="org00cc5f8"><span class="section-number-4">3.4.7.</span> clearSelection definition</h4>
+<div class="outline-text-4" id="text-3-4-7">
+<p>
+This is called to remove selection styling from other buttons when user clicks on an answer option.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="orga9a3a33"><span style="color: #51afef;">function</span> <span style="color: #c678dd;">clearSelection</span>() {
   btns = document.querySelectorAll(<span style="color: #98be65;">'.options'</span>)
   console.log(<span style="color: #98be65;">'clear selection'</span>)
   btns.forEach((btn) =&gt; {
     btn.classList.remove(<span style="color: #98be65;">'selected'</span>)
   })
 }
+</pre>
+</div>
+</div>
+</div>
 
-<span style="color: #51afef;">function</span> <span style="color: #c678dd;">resetCheckBtn</span>() {
-
+<div id="outline-container-orgac28c03" class="outline-4">
+<h4 id="orgac28c03"><span class="section-number-4">3.4.8.</span> resetCheckBtn definition</h4>
+<div class="outline-text-4" id="text-3-4-8">
+<p>
+This is called when user clicks on an answer choice. They might have already checked whether their answer was correct and the buttons state would have changed. This returns button to it&rsquo;s starting state.
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgea5de85"><span style="color: #51afef;">function</span> <span style="color: #c678dd;">resetCheckBtn</span>() {
   <span style="color: #51afef;">const</span> <span style="color: #dcaeea;">checkBtn</span> = document.querySelector(<span style="color: #98be65;">'#check button'</span>)
   checkBtn.innerText = <span style="color: #98be65;">'&#220;berpf&#252;fen'</span>
   checkBtn.classList.remove(<span style="color: #98be65;">'wrong'</span>)
@@ -791,11 +889,25 @@ checkEl.appendChild(checkBtn)
 </div>
 </div>
 </div>
+
+<div id="outline-container-orga1a2d53" class="outline-4">
+<h4 id="orga1a2d53"><span class="section-number-4">3.4.9.</span> Add eventListener to repeatBtn</h4>
+<div class="outline-text-4" id="text-3-4-9">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgc90d35e">repeatBtn.addEventListener(<span style="color: #98be65;">'click'</span>, () =&gt; {
+  document.getElementById(sounds[correctNumber]).play()
+})
+
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Reflektoin</p>
-<p class="date">Created: 2023-04-19 Wed 14:47</p>
+<p class="date">Created: 2023-04-19 Wed 15:37</p>
 </div>
 </body>
 </html>

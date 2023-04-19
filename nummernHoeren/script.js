@@ -1,58 +1,66 @@
-// [[file:all.org::js_file][js_file]]
-const sounds = ['null', 'eins', 'zwei', 'drei', 'fünf',
-                'sechs',
-                'sieben',
-                'acht',
-                'neun',
-                'zehn',
-                'elf',
-                'zwölf',
-                'dreizehn',
-'vierzehn',
-'fünfzehn',
-'sechzehn',
-'siebzehn',
-'achtzehn',
-'neunzehn',
-'zwanzig',
-'einundzwanzig',
-'zweiundzwanzig',
-'dreiundzwanzig',
-'vierundzwanzig',
-'fünfundzwanzig',
-'sechsundzwanzig',
-'siebenundzwanzig',
-'achtundzwanzig',
-'neunundzwanzig',
-'dreißig',
-'einunddreißig',
-'zweiunddreißig',
-'dreiunddreißig',
-'vierunddreißig',
-'fünfunddreißig',
-'sechsunddreißig',
-'siebenunddreißig',
-'achtunddreißig',
-'neununddreißig',
-'vierzig',
-'einundvierzig',
-'zweiundvierzig',
-'dreiundvierzig',
-'vierundvierzig',
-'fünfundvierzig',
-'sechsundvierzig',
-'siebenundvierzig',
-'achtundvierzig',
-'neunundvierzig',
-'fünfzig',
-'einundfünfzig',
-'zweiundfünfzig',
-'dreiundfünfzig',
-'vierundfünfzig',
-'fünfundfünfzig'
-        ];
+// [[file:all.org::sounds_def][sounds_def]]
+const sounds = [
+  'null',
+  'eins',
+  'zwei',
+  'drei',
+  'fünf',
+  'sechs',
+  'sieben',
+  'acht',
+  'neun',
+  'zehn',
+  'elf',
+  'zwölf',
+  'dreizehn',
+  'vierzehn',
+  'fünfzehn',
+  'sechzehn',
+  'siebzehn',
+  'achtzehn',
+  'neunzehn',
+  'zwanzig',
+  'einundzwanzig',
+  'zweiundzwanzig',
+  'dreiundzwanzig',
+  'vierundzwanzig',
+  'fünfundzwanzig',
+  'sechsundzwanzig',
+  'siebenundzwanzig',
+  'achtundzwanzig',
+  'neunundzwanzig',
+  'dreißig',
+  'einunddreißig',
+  'zweiunddreißig',
+  'dreiunddreißig',
+  'vierunddreißig',
+  'fünfunddreißig',
+  'sechsunddreißig',
+  'siebenunddreißig',
+  'achtunddreißig',
+  'neununddreißig',
+  'vierzig',
+  'einundvierzig',
+  'zweiundvierzig',
+  'dreiundvierzig',
+  'vierundvierzig',
+  'fünfundvierzig',
+  'sechsundvierzig',
+  'siebenundvierzig',
+  'achtundvierzig',
+  'neunundvierzig',
+  'fünfzig',
+  'einundfünfzig',
+  'zweiundfünfzig',
+  'dreiundfünfzig',
+  'vierundfünfzig',
+  'fünfundfünfzig'
+];
+// sounds_def ends here
+
+// [[file:all.org::addSounds][addSounds]]
 addSounds()
-function addSounds(){
+function addSounds() {
   sounds.forEach((sound) => {
     const body = document.querySelector('body')
     const soundEl = document.createElement('audio')
@@ -61,14 +69,17 @@ function addSounds(){
     body.appendChild(soundEl)
   });
 }
+// addSounds ends here
 
+// [[file:all.org::variable_definitions][variable_definitions]]
 let guessedAnswer = ''
 const correctNumber = getRandomNumberSound()
 const repeatBtn = document.querySelector('.btn.repeatBtn')
-console.log(repeatBtn)
-repeatBtn.addEventListener('click', () => {
-  document.getElementById(sounds[correctNumber]).play()
-})
+const checkEl = document.getElementById('check')
+const checkBtn = document.createElement('button')
+// variable_definitions ends here
+
+// [[file:all.org::js-sound-buttons][js-sound-buttons]]
 sounds.forEach(sound => {
   const btn = document.createElement('button')
   btn.classList.add('btn');
@@ -90,13 +101,12 @@ sounds.forEach(sound => {
   document.getElementById('buttons').
     appendChild(btn);
 })
+// js-sound-buttons ends here
 
-const checkEl = document.getElementById('check')
-const checkBtn = document.createElement('button')
-
+// [[file:all.org::js_checkBtn][js_checkBtn]]
 checkBtn.innerText = 'Überpfüfen'
 checkBtn.classList.add('btn');
-checkBtn.classList.add ('check')
+checkBtn.classList.add('check')
 checkBtn.addEventListener('click', () => {
   //remove correct and wrong classes in case user had already guessed
   checkBtn.classList.remove('correct')
@@ -114,9 +124,10 @@ checkBtn.addEventListener('click', () => {
     checkBtn.innerText = 'Versuch nochmal'
   }
 })
-
 checkEl.appendChild(checkBtn)
+// js_checkBtn ends here
 
+// [[file:all.org::js_stopSongs_def][js_stopSongs_def]]
 function stopSongs() {
   sounds.forEach(sound => {
     const song = document.getElementById(sound)
@@ -124,11 +135,15 @@ function stopSongs() {
     song.currentTime = 0;
   })
 }
+// js_stopSongs_def ends here
 
+// [[file:all.org::js_getRandomNumberSound_def][js_getRandomNumberSound_def]]
 function getRandomNumberSound() {
   return Math.floor(Math.random() * sounds.length)
 }
+// js_getRandomNumberSound_def ends here
 
+// [[file:all.org::js_clearSelection_def][js_clearSelection_def]]
 function clearSelection() {
   btns = document.querySelectorAll('.options')
   console.log('clear selection')
@@ -136,11 +151,18 @@ function clearSelection() {
     btn.classList.remove('selected')
   })
 }
+// js_clearSelection_def ends here
 
+// [[file:all.org::js_resetCheckBtn_def][js_resetCheckBtn_def]]
 function resetCheckBtn() {
-
   const checkBtn = document.querySelector('#check button')
   checkBtn.innerText = 'Überpfüfen'
   checkBtn.classList.remove('wrong')
 }
-// js_file ends here
+// js_resetCheckBtn_def ends here
+
+// [[file:all.org::js-repeatBtnEventListener][js-repeatBtnEventListener]]
+repeatBtn.addEventListener('click', () => {
+  document.getElementById(sounds[correctNumber]).play()
+})
+// js-repeatBtnEventListener ends here

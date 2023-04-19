@@ -20,7 +20,7 @@ Now "Wiederholen" button overlaps with some of the choice options.
 ** Generate random answer options
 ** Add option quiz specific set of numbers
 ** Add option to quiz specific range of numbers
-** Split js_file code block into separate blocks
+** DONE Split js_file code block into separate blocks
 Split related rows into their own blocks. Aim is to make it easier to refer to them and comment on them.
 ** Change vocabulary used to match Multiple choice terminology
 Currently source code contains haphazardly used vocabulary/terminology. Maybe aim could be to talk about concepts using words in Wikipedia's [[https://en.wikipedia.org/wiki/Multiple_choice][multiple choice article]].
@@ -36,7 +36,6 @@ Some components related to this:
 - [[*Repeat div][Repeat div]]
 - [[*Answer options][Answer options]]
 - [[*Check div][Check div]]
-
 
 * Building the page
 
@@ -276,62 +275,74 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 
 
 ** JavaScript file
-#+name: js_file
+
+#+name: sounds_def
 #+begin_src javascript :tangle script.js :comments link
-const sounds = ['null', 'eins', 'zwei', 'drei', 'fünf',
-                'sechs',
-                'sieben',
-                'acht',
-                'neun',
-                'zehn',
-                'elf',
-                'zwölf',
-                'dreizehn',
-'vierzehn',
-'fünfzehn',
-'sechzehn',
-'siebzehn',
-'achtzehn',
-'neunzehn',
-'zwanzig',
-'einundzwanzig',
-'zweiundzwanzig',
-'dreiundzwanzig',
-'vierundzwanzig',
-'fünfundzwanzig',
-'sechsundzwanzig',
-'siebenundzwanzig',
-'achtundzwanzig',
-'neunundzwanzig',
-'dreißig',
-'einunddreißig',
-'zweiunddreißig',
-'dreiunddreißig',
-'vierunddreißig',
-'fünfunddreißig',
-'sechsunddreißig',
-'siebenunddreißig',
-'achtunddreißig',
-'neununddreißig',
-'vierzig',
-'einundvierzig',
-'zweiundvierzig',
-'dreiundvierzig',
-'vierundvierzig',
-'fünfundvierzig',
-'sechsundvierzig',
-'siebenundvierzig',
-'achtundvierzig',
-'neunundvierzig',
-'fünfzig',
-'einundfünfzig',
-'zweiundfünfzig',
-'dreiundfünfzig',
-'vierundfünfzig',
-'fünfundfünfzig'
-        ];
+const sounds = [
+  'null',
+  'eins',
+  'zwei',
+  'drei',
+  'fünf',
+  'sechs',
+  'sieben',
+  'acht',
+  'neun',
+  'zehn',
+  'elf',
+  'zwölf',
+  'dreizehn',
+  'vierzehn',
+  'fünfzehn',
+  'sechzehn',
+  'siebzehn',
+  'achtzehn',
+  'neunzehn',
+  'zwanzig',
+  'einundzwanzig',
+  'zweiundzwanzig',
+  'dreiundzwanzig',
+  'vierundzwanzig',
+  'fünfundzwanzig',
+  'sechsundzwanzig',
+  'siebenundzwanzig',
+  'achtundzwanzig',
+  'neunundzwanzig',
+  'dreißig',
+  'einunddreißig',
+  'zweiunddreißig',
+  'dreiunddreißig',
+  'vierunddreißig',
+  'fünfunddreißig',
+  'sechsunddreißig',
+  'siebenunddreißig',
+  'achtunddreißig',
+  'neununddreißig',
+  'vierzig',
+  'einundvierzig',
+  'zweiundvierzig',
+  'dreiundvierzig',
+  'vierundvierzig',
+  'fünfundvierzig',
+  'sechsundvierzig',
+  'siebenundvierzig',
+  'achtundvierzig',
+  'neunundvierzig',
+  'fünfzig',
+  'einundfünfzig',
+  'zweiundfünfzig',
+  'dreiundfünfzig',
+  'vierundfünfzig',
+  'fünfundfünfzig'
+];
+#+end_src
+
+*** AddSounds function definition and call
+
+#+name: addSounds
+#+begin_src javascript :tangle script.js :comments link
 addSounds()
-function addSounds(){
+function addSounds() {
   sounds.forEach((sound) => {
     const body = document.querySelector('body')
     const soundEl = document.createElement('audio')
@@ -341,13 +352,23 @@ function addSounds(){
   });
 }
 
+#+end_src
+
+*** Variable definitions
+
+#+name: variable_definitions
+#+begin_src javascript :tangle script.js :comments link
 let guessedAnswer = ''
 const correctNumber = getRandomNumberSound()
 const repeatBtn = document.querySelector('.btn.repeatBtn')
-console.log(repeatBtn)
-repeatBtn.addEventListener('click', () => {
-  document.getElementById(sounds[correctNumber]).play()
-})
+const checkEl = document.getElementById('check')
+const checkBtn = document.createElement('button')
+#+end_src
+
+
+*** Generate and add sound buttons
+#+name: js-sound-buttons
+#+begin_src javascript :tangle script.js :comments link
 sounds.forEach(sound => {
   const btn = document.createElement('button')
   btn.classList.add('btn');
@@ -369,13 +390,15 @@ sounds.forEach(sound => {
   document.getElementById('buttons').
     appendChild(btn);
 })
+#+end_src
 
-const checkEl = document.getElementById('check')
-const checkBtn = document.createElement('button')
+*** Generate and add check button
 
+#+name: js_checkBtn
+#+begin_src javascript :tangle script.js :comments link
 checkBtn.innerText = 'Überpfüfen'
 checkBtn.classList.add('btn');
-checkBtn.classList.add ('check')
+checkBtn.classList.add('check')
 checkBtn.addEventListener('click', () => {
   //remove correct and wrong classes in case user had already guessed
   checkBtn.classList.remove('correct')
@@ -393,9 +416,19 @@ checkBtn.addEventListener('click', () => {
     checkBtn.innerText = 'Versuch nochmal'
   }
 })
-
 checkEl.appendChild(checkBtn)
+#+end_src
 
+
+*** stopSongs function definition
+This is used to stop playing sounds.
+Scenario: User tries to play another sound while previous one is still playing. The program then stops the first sound so that only one sound will be played at a time.
+
+Used in:
+- [[*Generate and add sound buttons][Generate and add sound buttons]]
+
+#+name: js_stopSongs_def
+#+begin_src javascript :tangle script.js :comments link
 function stopSongs() {
   sounds.forEach(sound => {
     const song = document.getElementById(sound)
@@ -403,11 +436,24 @@ function stopSongs() {
     song.currentTime = 0;
   })
 }
+#+end_src
 
+
+*** getRandomNumberSound
+
+#+name: js_getRandomNumberSound_def
+#+begin_src javascript :tangle script.js :comments link
 function getRandomNumberSound() {
   return Math.floor(Math.random() * sounds.length)
 }
+#+end_src
 
+
+*** clearSelection definition
+This is called to remove selection styling from other buttons when user clicks on an answer option.
+
+#+name: js_clearSelection_def
+#+begin_src javascript :tangle script.js :comments link
 function clearSelection() {
   btns = document.querySelectorAll('.options')
   console.log('clear selection')
@@ -415,11 +461,25 @@ function clearSelection() {
     btn.classList.remove('selected')
   })
 }
+#+end_src
 
+*** resetCheckBtn definition
+This is called when user clicks on an answer choice. They might have already checked whether their answer was correct and the buttons state would have changed. This returns button to it's starting state.
+#+name: js_resetCheckBtn_def
+#+begin_src javascript :tangle script.js :comments link
 function resetCheckBtn() {
-
   const checkBtn = document.querySelector('#check button')
   checkBtn.innerText = 'Überpfüfen'
   checkBtn.classList.remove('wrong')
 }
+#+end_src
+
+*** Add eventListener to repeatBtn
+
+#+name: js-repeatBtnEventListener
+#+begin_src javascript :tangle script.js :comments link
+repeatBtn.addEventListener('click', () => {
+  document.getElementById(sounds[correctNumber]).play()
+})
+
 #+end_src
