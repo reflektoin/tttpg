@@ -173,6 +173,7 @@ repeatBtn.addEventListener('click', () => {
   if(repeatBtn.classList.contains('newNumber')){
     document.getElementById(sounds[correctNumber]).play()
     resetCheckBtn()
+    clearSelection()
     repeatBtn.innerText = 'Wiederholen'
     repeatBtn.classList.remove('newNumber')
   }else {
