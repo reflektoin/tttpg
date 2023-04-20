@@ -51,6 +51,19 @@ footer {
     font-size: 2rem;
 
 }
+
+.newNumber {
+    animation: reveal 0.5s ease-in;
+}
+
+@keyframes reveal {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 /* repeatBtn_styling ends here */
 
 /* [[file:all.org::btn_hover_styling][btn_hover_styling]] */

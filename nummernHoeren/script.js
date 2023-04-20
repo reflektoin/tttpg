@@ -73,7 +73,7 @@ function addSounds() {
 
 // [[file:all.org::variable_definitions][variable_definitions]]
 let guessedAnswer = ''
-const correctNumber = getRandomNumberSound()
+let correctNumber = getRandomNumberSound()
 const repeatBtn = document.querySelector('.btn.repeatBtn')
 const checkEl = document.getElementById('check')
 const checkBtn = document.createElement('button')
@@ -118,6 +118,12 @@ checkBtn.addEventListener('click', () => {
     //add class "correct" in order to stylize it to show that the answer was correct
     checkBtn.classList.add('correct')
     checkBtn.innerText = 'Richtig!'
+
+    //modify wiederholen button to ask if user wants to be asked another number
+    repeatBtn.innerText = 'Neu Nummer?'
+    correctNumber = getRandomNumberSound()
+
+    repeatBtn.classList.add('newNumber')
   } else {
     console.log('Wrong answer')
     checkBtn.classList.add('wrong')
@@ -158,11 +164,19 @@ function resetCheckBtn() {
   const checkBtn = document.querySelector('#check button')
   checkBtn.innerText = 'Überpfüfen'
   checkBtn.classList.remove('wrong')
+  checkBtn.classList.remove('correct')
 }
 // js_resetCheckBtn_def ends here
 
 // [[file:all.org::js-repeatBtnEventListener][js-repeatBtnEventListener]]
 repeatBtn.addEventListener('click', () => {
+  if(repeatBtn.classList.contains('newNumber')){
+    document.getElementById(sounds[correctNumber]).play()
+    resetCheckBtn()
+    repeatBtn.innerText = 'Wiederholen'
+    repeatBtn.classList.remove('newNumber')
+  }else {
   document.getElementById(sounds[correctNumber]).play()
+  }
 })
 // js-repeatBtnEventListener ends here
