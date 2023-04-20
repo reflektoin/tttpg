@@ -36,6 +36,8 @@ Some components related to this:
 - [[*Repeat div][Repeat div]]
 - [[*Answer options][Answer options]]
 - [[*Check div][Check div]]
+** Add link pointing to the homepage.
+** Add linking pointing to the source code
 
 * Building the page
 
