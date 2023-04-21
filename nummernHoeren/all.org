@@ -14,6 +14,10 @@ By loading the page again another number will be quizzed.
 ** Choice buttons
 ** Check Answer button
 
+
+* ISSUES
+** TODO Check button disappers
+Check button disappears when developer console is opened.
 * IDEAS
 ** DONE Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
 :PROPERTIES:
