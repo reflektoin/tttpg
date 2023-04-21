@@ -9,6 +9,10 @@ If the choice was correct the Überprüfen button will change color to green and
 
 By loading the page again another number will be quizzed.
 
+* Functionalities
+** Repeat Button / New Number Button
+** Choice buttons
+** Check Answer button
 
 * IDEAS
 ** DONE Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
