@@ -17,7 +17,10 @@ By loading the page again another number will be quizzed.
 
 * ISSUES
 ** TODO Check button disappers
+*** What happens
 Check button disappears when developer console is opened.
+*** What Should happen
+Area of answer options should decrease and the Check button should remain visible.
 
 * IDEAS
 ** DONE Stylize buttons "Wiederholen" and "Überprüfen" to diffently from answer options
