@@ -73,9 +73,18 @@ Let's create a unordered list which will contain different pages to practice Ger
 We'll add a link to index.html file located in folder nummernHoeren. The file nummernHoeren/index.html is created from file [[./nummernHoeren/all.org]]
 #+name: nummerHoerenLink
 #+begin_src html :tangle index.html :comments link
-            <a href="./nummernHoeren/index.html">Üben Nummern hören</a>
+            <li>
+                <a href="./nummernHoeren/index.html">Üben Nummern hören</a>
+            </li>
 #+end_src
 
+Add link to site about playing sounds of letters.
+#+name: buchstage-hoeren
+#+begin_src html :tangle index.html :comments link
+            <li>
+                <a href="./buchstabeHoeren/index.html">Buchstaben hören</a>
+            </li>
+#+end_src
 #+name: end_practices_ul
 #+begin_src html :tangle index.html :comments link
         </ul>
